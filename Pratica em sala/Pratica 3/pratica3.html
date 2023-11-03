@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pratica 3">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Pratica 3 em Sala</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <hr>
+
+    <form>
+        Nome <input type="text" id="name" name="nome" value=""><br>
+
+        Introduza o sua password <input type="password" name="palavra-passe"><br>
+
+        Data de Nascimento <input type="date" name="data" id="data"><br>
+
+        Telefone <input type="tel" id="phone" name="telefone" placeholder="123-456-789" pattern="[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9]"><br>
+
+        e-mail <input type="email" name="e-mail" id="e-mail"><br>
+
+        Género <br>
+        <input type="radio" id="male" name="gender" value="male">Masculino <br>
+        <input type="radio" id="famale" name="gender" value="famale">Feminino <br>
+
+        Nacionalidade <br>
+        <select name="select">
+            <option value="portuguesa">Portuguesa</option>
+            <option value="brasileira">Brasileira</option>
+        </select>
+
+        Escolheu este curso por motivos profissionais? <br>
+        <input type="checkbox" id="box" name="sim" value="sim" checked>SIM <br>
+        <input type="checkbox" id="box" name="nao" value="nao">NÃO <br>
+
+        Decreva as suas motivações para frequentar este curso. <br>
+        <textarea name="descrição" cols="50" rows="20"></textarea> <br>
+
+        Numa escala de 1 a 5 como avalia este curso? <br>
+        <input type="range" id="range" name="range" min="0 max
+        5"> <br>
+
+        <hr>
+
+        <button type="submit">Enviar Formulário</button>
+        <button type="reset">Apagar Formulário</button>
+    </form>
+</body>
+</html>

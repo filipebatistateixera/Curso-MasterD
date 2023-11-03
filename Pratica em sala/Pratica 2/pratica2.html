@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pratica 2">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Pratica 2 em Sala</title>
+    <style>
+        table {
+            border: 1px solid black;
+            padding: 5px;
+            border-spacing: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        #cor1 {
+            background-color: #819FF7;
+        }
+        #cor2 {
+            background-color: #81F7D8;
+        }
+        .cor3 {
+            background-color: #D8D8D8;
+        }
+        #cor4 {
+            background-color: #F5BCA9;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Preços dos quartos do hotel</h1>
+    <hr>
+
+    <table>
+        <tr>
+            <th id="cor1" colspan="3">Preços por tipo de quarto</th>
+        </tr>
+
+        <tr id="cor2">
+            <th>Nome do quarto</th>
+            <th>capacidade</th>
+            <th>Preço</th>
+        </tr>
+
+        <tr>
+            <th class="cor3">Lisboa</th>
+            <td>1 pax</td>
+            <td>30,00 &euro;</td>
+        </tr>
+
+        <tr>
+            <th class="cor3">Porto</th>
+            <td>2 pax</td>
+            <td>40,00 &euro;</td>
+        </tr>
+
+        <tr>
+            <th class="cor3">Coimbra</th>
+            <td>3 pax</td>
+            <td id="cor4" rowspan="2">50,00 &euro;</td>
+        </tr>
+
+        <tr>
+            <th class="cor3">Faro</th>
+            <td>4 pax</td>
+        </tr>
+
+    </table>
+</body>
+</html>

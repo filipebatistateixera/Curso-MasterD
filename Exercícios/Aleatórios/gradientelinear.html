@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cores css">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Colors CSS</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin: 20px;
+            padding: 50px;
+        }
+
+        #grad_1 {
+            background-color: #33FFBD;
+            background-image: linear-gradient(#33FFBD, #FFC300);
+        }
+
+        #grad_2 {
+            background-color: #33FFBD;
+            background-image: linear-gradient(to right, #33FFBD, rgba(0, 0, 255, 0.336), #FFC300);
+        }
+
+        #grad_3 {
+            background-color: #33FFBD;
+            background-image: linear-gradient(to bottom right, #33FFBD, #FFC300);
+        }
+
+        #grad_4 {
+            background-color: #33FFBD;
+            background-image: linear-gradient(300deg, #33FFBD, #FFC300);
+        }
+
+        #footer {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>A minha primeira paágina usando gradientes lineares em CSS</h1>
+
+    <div id="grad_1">
+        <h1>Gradiente linear com direção "to bottom" - default</h1>
+    </div>
+
+    <div id="grad_2">
+        <h1>Gradiente linear com direção "to right</h1>
+    </div>
+
+    <div id="grad_3">
+        <h1>Gradiente linear com direção "to bottom right</h1>
+    </div>
+
+    <div id="grad_4">
+        <h1>Gradiente linear com direção "300deg"</h1>
+    </div>
+
+    <hr>
+
+    <p id="footer">Feito por Filipe Teixeira, 2023</p>
+</body>
+</html>
