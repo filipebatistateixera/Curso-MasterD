@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="position absolute">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Position CSS</title>
+    <style>
+        div.relative {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            background-color: #73AD21;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 150px;
+            right: 100px;
+            width: 200px;
+            height: 100px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h2>position: absolute;</h2>
+    
+    <div class="relative">Este elemento tem atributo <i>relative</i> e está posicionado em relação à sua posição normal</div>
+
+    <div class="absolute">Este elemento tem atributo <i>absolute</i> e está posicionado em relação ao sei ancestral (a div.relative)</div>
+</body>
+</html>
