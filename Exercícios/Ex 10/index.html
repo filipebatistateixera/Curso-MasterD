@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="layout exercício">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Layout exercício</title>
+
+    <script src="https://kit.fontawesome.com/d132031da6.js"
+    crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: #759796;
+            color: #fffbc7;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .coluna-meio, .coluna-lado {
+            float: left;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .coluna-lado {
+            width: 25%;
+            background-color: #b9d532;
+        }
+
+        .coluna-meio {
+            width: 50%;
+            background-color: #fffbc7;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            background-color: #292d73;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .coluna-lado, .coluna-meio {
+                width: 100%;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            background-color: #3a64ae;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            background-color: #ffcc03;
+        }
+
+        .active {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #float-right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imagens/imagem300.webp" alt="Interrogação" >
+        <h2>O meo primeiro layout</h2>
+    </div>
+
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="https://www.masterd.pt/">Master D</a></li>
+            <li><a href="https://www.google.pt/">Google</a></li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://www.w3.org/">W3C</a></li>
+            <li id="float-right"><a href=""><i class="fas fa-search"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="coluna-lado">Coluna 1 - ocupa 25% da largura total</div>
+        <div class="coluna-meio">Coluna 2 - ocupa 50% da largura total</div>
+        <div class="coluna-lado">Cluna 3 - ocupa 25% da largura total</div>
+    </div>
+
+    <div class="footer">
+        <p>Isto é um footer</p>
+    </div>
+</body>
+</html>
