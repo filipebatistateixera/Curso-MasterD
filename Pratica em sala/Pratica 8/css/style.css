@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+header {
+    text-align: center;
+    background-color: #1d1d1d;
+}
+
+h1, h2, h3 {
+    color: #c52233;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h3 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 36px;
+}
+
+nav, aside, footer {
+    text-align: center;
+    font-size: 30px;
+}
+
+nav, aside {
+    background-color: #c52233;
+}
+
+footer {
+    background-color: #262626;
+}
+
+#picJD {
+    width: 300px;
+}
+
+.nomepagina {
+    font-size: 44px;
+    text-align: right;
+}
+
+.paragrafo2 {
+    background-color: #d7d7d7;
+}
+
+span#JohnDoe_text {
+    font-weight: bold;
+}
+
+h1::before, h1::after {
+    content: "...";
+    color: white;
+}
+
+a:link, a:visited, a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 36px;
+}
+
+div.gostos {
+    background-color: rgb(25, 134, 104);
+}
+
+#tit_gosto {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(197, 34, 51);
+    font-size: 2em;
+    letter-spacing: epx;
+    text-indent: 30px;
+}
+
+#pic-plane-JD, #pic-book-JD {
+    width: 200px;
+}
+
+.preferidos {
+    direction: rtl;
+    text-decoration: underline;
+}
+
+.mais_sobre {
+    font-style: italic;
+    text-align: center;
+}
+
+a.botão:link, a.botão:visited, a.botão:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 42px;
+}
+
+a.botão:hover {
+    background-color: rgb(197, 34, 51);
+    color: white;
+}
