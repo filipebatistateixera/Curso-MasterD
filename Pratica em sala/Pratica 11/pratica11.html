@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>Página pessoal do John Doe</h1>
+        <h1 id="tit-header">Página pessoal do John Doe</h1>
 
         <img src="Imagens/Png-clipart-woman-question-mark-female-1000-people-presentation.png" id="picJD" alt="Imagem"> <br>
 
@@ -31,25 +31,30 @@
     <section>
         <h3>Quem é John Doe?</h3>
 
-        <p><span id="JohnDoe_text">"John Doe"</span> é um pseudónimo coletivo que é usado quando o nome verdadeiro de uma pessoa é desconhecido ou é intencionalmente olcultado.</p>
+        <div class="quem-image">
+            <img src="Imagens/John Doe.jpg" alt="Imagem John Doe" width="300px" height="300px">
+        </div>
+
+        <p class="paragrafo1"><span>"John Doe"</span> é um pseudónimo coletivo que é usado quando o nome verdadeiro de uma pessoa é desconhecido ou é intencionalmente olcultado.</p>
     
         <p class="paragrafo2">Em segundo lugar, esses nomes também são frequentemente usados para se referir a um hipotético "everyman" (homem comum) em outros contextos.</p>
 
         <div class="gostos">
-            <h3 id="tit_gosto">Gosto de...</h3>
+            <h3>Gosto de...</h3>
 
             <div id="ler">
                 <h4>Ler</h4>
                 
                 <img src="Imagens/livros.png" id="pic-book-JD" alt="imagem livros">
 
-                <p class="preferidos">Os meus autores preferidos são:</p>
-
-                <ul>
-                    <li>José Sramango</li>
-                    <li>Mia Couto</li>
-                    <li>Gabriel García Márquez</li>
-                </ul>
+                <div class="pref-ler-viajar">
+                    <p>Os meus autores preferidos são:</p>
+                    <ul>
+                        <li>José Sramango</li>
+                        <li>Mia Couto</li>
+                        <li>Gabriel García Márquez</li>
+                    </ul>
+                </div>
 
                 <p>Descubra mais sobre...</p>
 
@@ -73,7 +78,7 @@
 
                 <a href="hobbies_johndoe.html" class="botão">Minhas viagens</a>
             </div>
-        </div>
+        </div> <br> <br>
     </section>
 
     <aside>

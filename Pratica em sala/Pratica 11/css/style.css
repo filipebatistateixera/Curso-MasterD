@@ -16,6 +16,8 @@ h1 {
 h3 {
     font-size: 30px;
     text-decoration: underline;
+    margin-left: 50px;
+    padding-top: 20px;
 }
 
 p {
@@ -116,8 +118,9 @@ aside {
     background-position: center center;
 }
 
-.link-1 .mais_sobre {
-    text-align: center;
+.mais_sobre {
+    position: relative;
+
 }
 
 .link-1 {
@@ -138,9 +141,30 @@ aside {
 
 #ler, #viajar {
     border: 1px dotted white;
+    display: inline-block;
+    width: 45%;
+    padding: 2%;
 }
 
 a.menu {
     border-left: 6px solid white;
+    margin-left: 50px;
+    padding-left: 10px;
 }
 
+.paragrafo1, .paragrafo2 {
+    max-width: 30%;
+    display: inline-block;
+    margin-left: 30px;
+    padding: 30px;
+}
+
+.quem-image {
+    display: inline-block;
+    margin-left: 30px;
+    float: left;
+}
+
+#tit-header {
+    position: absolute;
+}

@@ -116,8 +116,9 @@ aside {
     background-position: center center;
 }
 
-.link-1 .mais_sobre {
-    text-align: center;
+.mais_sobre {
+    position: relative;
+
 }
 
 .link-1 {
@@ -138,9 +139,20 @@ aside {
 
 #ler, #viajar {
     border: 1px dotted white;
+    display: inline-block;
+    width: 45%;
 }
 
 a.menu {
     border-left: 6px solid white;
 }
 
+.paragrafo1, .paragrafo2 {
+    max-width: 35%;
+    display: inline-block;
+}
+
+.quem-image {
+    display: inline-block;
+
+}
