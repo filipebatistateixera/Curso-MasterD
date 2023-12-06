@@ -70,6 +70,7 @@ a:hover {
 
 div.gostos {
     background-color: #d7d7d7;
+    margin-top: 50px;
 }
 
 #tit_gosto {
@@ -85,7 +86,7 @@ h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(197, 34, 51);
     font-size: 2em;
-    letter-spacing: epx;
+    letter-spacing: 2px;
     text-indent: 30px;
 }
 
@@ -146,6 +147,7 @@ aside {
     padding: 2%;
 }
 
+
 a.menu {
     border-left: 6px solid white;
     margin-left: 50px;
@@ -162,9 +164,28 @@ a.menu {
 .quem-image {
     display: inline-block;
     margin-left: 30px;
-    float: left;
+    float: none;
 }
 
 #tit-header {
     position: absolute;
+    width: 50%;
+    top: 160px;
+    left: 25%;
+}
+
+nav {
+    padding: 50px;
+}
+
+.nomepagina {
+    padding: 50px 100px;
+}
+
+.pref-ler-viajar {
+    float: left;
+}
+
+#pic-book-JD, #pic-plane-JD {
+    float: left;
 }
