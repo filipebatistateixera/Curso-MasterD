@@ -10,27 +10,46 @@ body {
 }
 
 @font-face {
-    font-family: IndieFlower;
-    src: url(../Fonts/IndieFlower-Regular.ttf);
+    font-family: LaBeauties;
+    src: url(../Fonts/La\ Beauties.ttf);
 }
 
 nav {
+    overflow: hidden;
     background-color: black;
     padding: 15px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
 }
 
-.menu {
+.nav-barra a {
+    float: left;
     margin-left: 50px;
     color: rgba(255, 255, 255, 0.867);
+    text-align: center;
     text-decoration: none;
     font-size: 20px;
-    
 }
 
-.menu:hover {
+.dropdown {
+    float: left;
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+.dropdown .drop {
+    color: rgba(255, 255, 255, 0.867);
+    font-size: 20px;
+    background-color: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+.nav-barra a:hover, .dropdown:hover {
     background-color: rgba(79, 79, 79, 0.821);
-    padding: 15px;
+    padding: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
     text-decoration: underline;
 }
 
@@ -46,10 +65,10 @@ section {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 70px;
     padding-top: 15px;
     margin-bottom: 10px;
-    font-family: IndieFlower;
+    font-family: LaBeauties;
 }
 
 #titulo2 {
@@ -60,10 +79,12 @@ h1 {
 }
 
 .paragrafo_section {
+    max-width: 850px;
+    min-width: 300px;
     text-align: justify;
-    
-    width: 850px;
     margin: auto;
+    padding: 5px;
+    text-indent: 30px;
 }
 
 .img-discografia {
@@ -72,7 +93,32 @@ h1 {
 }
 
 article {
+    background-color: black;
     text-align: center;
+    height: 600px;
+}
+
+#tit-article {
+    color: rgba(255, 255, 255, 0.87);
+    padding: 10px;
+    font-family: LaBeauties;
+    font-size: 60px;
+}
+
+article > p {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+article > div {
+    background-color: white;
+    max-width: 790px;
+    margin: auto;
+    height: 400px;
+}
+
+.div-interna {
+    float: left;
+    text-indent: 10px;
 }
 
 .foto-article {

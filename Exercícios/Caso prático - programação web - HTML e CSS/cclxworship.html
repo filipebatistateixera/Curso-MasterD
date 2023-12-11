@@ -10,15 +10,21 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+    
     
 </head>
 <body>
     <header>
-        <nav>
-            <a href="" class="menu">HOME</a>
-            <a href="" class="menu">A BANDA</a>
-            <a href="" class="menu">DISCOGRAFIA</a>
-            <a href="" class="menu">CONTACTO</a>
+        <nav class="nav-barra">
+            <a href="">HOME</a>
+            
+            <div class="dropdown">
+                <button class="drop">O MINISTÉRIO<i class="fa fa-caret-down"></i></button>
+            </div>
+
+            <a href="">DISCOGRAFIA</a>
+            <a href="">CONTACTO</a>
             <a href="" id="float-right"> <i class="fas fa-search"></i></a>
         </nav>
     </header>
@@ -43,23 +49,48 @@
         </div>
 
     </section>
-
+    <br>
     <article>
-        <h2>O Ministério</h2>
+        <h2 id="tit-article">O Ministério</h2>
         <p>Aonde nos encontrar</p>
 
         <div>
             <p>Pode nos encontrar em nossas sedes</p>
-
-            <div>
+            <br>
+            <div class="div-interna">
                 <img class="foto-article" src="imagens/foto11.jpg" alt="Imagem">
-                <p>Açores</p>
+                <p>CCLX - Açores</p>
+                <a class="link-article" href="">Saber mais</a>
+            </div>
+            
+            <div class="div-interna">
+                <img class="foto-article" src="imagens/foto16.jpg" alt="Imagem">
+                <p>CCLX - Porto</p>
+                <a class="link-article" href="">Saber mais</a>
+            </div>
+
+            <div class="div-interna">
+                <img class="foto-article" src="imagens/foto6.jpg" alt="">
+                <p>CCLX - Sede</p>
                 <a class="link-article" href="">Saber mais</a>
             </div>
 
         </div>
 
     </article>
+
+    <aside>
+        <h2>CONTACTOS</h2>
+        <p>Quer se juntar à nós? Envia uma mensagem.</p>
+
+        <div id="Contactos">
+
+        </div>
+
+        <div id="mensagem">
+
+        </div>
+    </aside>
 
 
 </body>
