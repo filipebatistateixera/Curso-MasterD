@@ -23,7 +23,7 @@ nav {
 
 .nav-barra a {
     float: left;
-    margin-left: 50px;
+    margin-left: 40px;
     color: rgba(255, 255, 255, 0.867);
     text-align: center;
     text-decoration: none;
@@ -51,6 +51,34 @@ nav {
     margin-top: -10px;
     margin-bottom: -10px;
     text-decoration: underline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgba(44 , 44, 44, 0.888);
+    min-width: 150px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+    z-index: 1;
+    padding-top: 5px;
+    }
+
+.dropdown-content a {
+    float: none;
+    color: rgba(255, 255, 255, 0.867);
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 #float-right {
@@ -84,7 +112,7 @@ h1 {
     font-size: 18px;
     text-align: justify;
     margin: auto;
-    padding: 5px;
+    padding: 10px;
     text-indent: 30px;
     line-height: 1.5;
 }
@@ -162,8 +190,9 @@ article div p {
 
 aside {
     text-align: center;
-    padding: 10px;
-    max-width: 600px;
+    padding: 20px;
+    padding-bottom: 100px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -171,31 +200,53 @@ aside {
     font-weight: normal;
     font-size: 30px;
     padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 35px;
 }
 
 aside div {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #contactos {
-    float: left;
-    
-    padding: 15px;
-    text-align: left;
+    float: left;   
 }
 
-#mensagem {
-    float: left;
+#contactos .icones {
+    width: 15px;
+    height: auto;
+}
 
-    padding: 15px;
+#contactos, #mensagem {
+    padding: 100px;
     text-align: left;
 }
 
 .botão {
     float: right;
     padding: 10px;
+    margin-right: 36px;
     background-color: black;
     color: white;
 }
 
+footer {
+    position: relative;
+    background-color: rgba(229, 228, 228, 0.916);
+    height: 200px;
+    text-align: center;
+}
+
+.div-footer {
+    position: absolute;
+    top: 35%;
+    left: 45%;    
+}
+
+footer a img {
+    width: 25px;
+    height: auto;
+}
+
+footer div p {
+    padding: 10px;
+}
