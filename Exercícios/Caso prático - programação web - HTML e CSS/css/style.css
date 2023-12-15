@@ -17,13 +17,13 @@ body {
 nav {
     overflow: hidden;
     background-color: black;
-    padding: 15px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
 }
 
 .nav-barra a {
     float: left;
     margin-left: 40px;
+    padding: 15px;
     color: rgba(255, 255, 255, 0.867);
     text-align: center;
     text-decoration: none;
@@ -32,12 +32,14 @@ nav {
 
 .dropdown {
     float: left;
-    margin-left: 50px;
     overflow: hidden;
+    margin-left: 40px;
 }
 
 .dropdown .drop {
     color: rgba(255, 255, 255, 0.867);
+    padding: 15px;
+    margin: 0;
     font-size: 20px;
     background-color: inherit;
     font-family: inherit;
@@ -45,29 +47,24 @@ nav {
     outline: none;
 }
 
-.nav-barra a:hover, .dropdown:hover {
+.nav-barra a:hover, .dropdown:hover, .drop:hover {
     background-color: rgba(44, 44, 44, 0.888);
-    padding: 10px;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    text-decoration: underline;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color:rgba(44 , 44, 44, 0.888);
-    min-width: 150px;
+    min-width: 180px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
     z-index: 1;
-    padding-top: 5px;
     }
 
 .dropdown-content a {
     float: none;
     color: rgba(255, 255, 255, 0.867);
     margin: 0;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -83,7 +80,7 @@ nav {
 
 #float-right {
     float: right;
-    padding-right: 5px;
+    padding-right: 15px;
     color: rgba(255, 255, 255, 0.867);
 }
 
@@ -137,6 +134,7 @@ article {
     background-color: black;
     text-align: center;
     height: 900px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
 }
 
 #tit-article {
@@ -178,6 +176,7 @@ article div p {
 
 article div p {
     font-weight: bold;
+
 }
 
 .link-article {
@@ -239,7 +238,7 @@ footer {
 .div-footer {
     position: absolute;
     top: 35%;
-    left: 45%;    
+    left: 43%;    
 }
 
 footer a img {
