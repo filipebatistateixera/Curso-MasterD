@@ -126,6 +126,7 @@ section div p {
 }
 
 .img-discografia {
+    padding-bottom: 50px;
     width: 250px;
     height: 300px;
 }
@@ -258,16 +259,14 @@ aside div {
 }
 
 footer {
-    position: relative;
+    
     background-color: rgba(229, 228, 228, 0.916);
     height: 200px;
     text-align: center;
 }
 
 .div-footer {
-    position: absolute;
-    top: 35%;
-    left: 43%;    
+    padding-top: 70px;
 }
 
 footer a img {
