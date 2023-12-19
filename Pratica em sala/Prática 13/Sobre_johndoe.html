@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal do John Doe">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Página pessoal do John Doe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+    <style>
+        @font-face {
+            font-family: SpecialElite-Regular;
+            src: url(Fonts/SpecialElite-Regular.ttf);
+        }
+        body {
+            background-color: black;
+        }
+
+        header {
+            background-color: black;
+        }
+
+        img#picJD2 {
+            width: 250px;
+            border-radius: 125px;
+            border: 0.5px solid white;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #82202a;
+        }
+
+        section {
+            height: 300px;
+        }
+
+        div.gallery {
+            margin: 2%;
+            border: 0.5px solid black;
+            float: left;
+            width: 20%;
+        }
+
+        div.gallery:hover {
+            border: 1px solid white;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .fab, .fas {
+            font-size: 50px;
+            color: white;
+            float: none;
+        }
+
+        .fas {
+            color: rgb(197, 34, 51);
+        }
+
+        .redes-sociais {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        i.fab.fa-instagram-square {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #telefone, #mail, #morada {
+            display: inline-block;
+            width: 25%;
+            padding: 0px 50px;
+        }
+
+        #mail {
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+        }
+
+        .contactos-texto {
+            color: white;
+        }
+
+        footer {
+            background-color: inherit;
+            padding: inherit;
+            padding-top: 50px;
+            margin: inherit;
+            font-size: inherit;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <img src="Imagens/JohnDoe2.jpg" id="picJD2" alt="imagem John Doe">
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="pratica4.html">Home</a></li>
+            <li><a href="Sobre_johndoe.html">Sobre</a></li>
+            <li><a href="hobbies_johndoe.html">Hobbies</a></li>
+            <li><a href="contactos_johndoe.htm">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <article>
+
+        <h2 class="nomepagina">Sobre</h2>
+    </article>
+
+    
+
+    <section>
+
+        <div class="galeria-imagens">
+            <div class="gallery">
+                <a target="_blank" href="Imagens/John Doe.jpg">
+                    <img src="Imagens/John Doe.jpg" alt="John Doe Black" width="20%">
+                </a>
+                <div class="desc">John Doe com o fundo preto</div>
+            </div>
+        </div>
+
+        <div class="galeria-imagens">
+            <div class="gallery">
+                <a target="_blank" href="Imagens/JohnDoered.jpg">
+                    <img src="Imagens/JohnDoered.jpg" alt="John Doe Red" width="20%">
+                </a>
+                <div class="desc">John Doe com o fundo vermelho</div>
+            </div>
+        </div>
+
+        <div class="galeria-imagens">
+            <div class="gallery">
+                <a target="_blank" href="Imagens/JohnDoegrey.jpg">
+                    <img src="Imagens/JohnDoegrey.jpg" alt="John Doe Grey" width="20%">
+                </a>
+                <div class="desc">John Doe com o fundo cenza</div>
+            </div>
+        </div>
+
+        <div class="galeria-imagens">
+            <div class="gallery">
+                <a target="_blank" href="Imagens/JohnDoeblue.jpg">
+                    <img src="Imagens/JohnDoeblue.jpg" alt="John Doe Blue" width="20%">
+                </a>
+                <div class="desc">John Doe com o fundo azul</div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="redes-sociais"></div>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+
+            <a href="https://twitter.com/?lang=pt_pt" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+        <div class="contactos-jd">
+        
+        <h3 id="tit_gosto">Contactos</h3>
+
+        <div id="telefone">
+            <i class="fas fa-phone"></i>
+            <p class="contactos-texto">+351 123 456 789</p>
+        </div>
+
+        <div id="mail">
+            <i class="fas fa-envelope"></i>
+            <p class="contactos-texto">johndoe@exemplo.com</p>
+        </div>
+
+        <div id="morada">
+            <i class="fas fa-map-marker-alt"></i>
+            <p class="contactos-texto">Avenida das Ruas n1</p>
+        </div>
+
+    </div>
+    </footer>
+
+</body>
+</html>

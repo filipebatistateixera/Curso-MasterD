@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal do John Doe">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Página pessoal do John Doe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+    <style>
+        @font-face {
+            font-family: SpecialElite-Regular;
+            src: url(Fonts/SpecialElite-Regular.ttf);
+        }
+        body {
+            background-color: black;
+        }
+
+        header {
+            background-color: black;
+        }
+
+        img#picJD1, img#picJD3 {
+            width: 200px;
+            border-radius: 100px;
+            border: 0.5px solid white;
+        }
+
+        img#picJD1 {
+            opacity: 0.2;
+        }
+
+        img#picJD3 {
+            opacity: 0.8;
+        }
+
+        img#picJD2 {
+            width: 250px;
+            border-radius: 125px;
+            border: 0.5px solid white;
+        }
+
+        h2 {
+            font-family: SpecialElite-Regular;
+        }
+
+        .fab, .fas {
+            font-size: 50px;
+            color: white;
+        }
+
+        .fas {
+            color: rgb(197, 34, 51);
+        }
+
+        .redes-sociais {
+            text-align: center;
+            border-bottom: 1px solid white;
+            padding-bottom: 50px;
+        }
+
+        i.fab.fa-instagram-square {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #telefone, #mail, #morada {
+            display: inline-block;
+            width: 25%;
+            padding: 0px 50px;
+        }
+
+        #mail {
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+        }
+
+        .contactos-texto {
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <img src="Imagens/JohnDoe1.jpg" id="picJD1" alt="imagem John Doe">
+        <img src="Imagens/JohnDoe2.jpg" id="picJD2" alt="imagem John Doe">
+        <img src="Imagens/JohnDoe3.jpg" id="picJD3" alt="imagem John Doe">
+
+    </header>
+
+    <nav>
+        <a href="pratica4.html" class="menu">Home</a>
+        <a href="Sobre_johndoe.html" class="menu">Sobre mim</a>
+        <a href="hobbies_johndoe.html" class="menu">Hobbies</a>
+        <a href="contactos_johndoe.htm" class="menu">Contacto</a>
+    </nav>
+
+    <article>
+
+        <h2 class="nomepagina">Contactos</h2>
+    </article>
+
+
+    <section>
+
+        <div class="redes-sociais">
+
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+
+            <a href="https://twitter.com/?lang=pt_pt" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+        <div class="contactos-jd">
+            
+            <h3 id="tit_gosto">Contactos</h3>
+
+            <div id="telefone">
+                <i class="fas fa-phone"></i>
+                <p class="contactos-texto">+351 123 456 789</p>
+            </div>
+
+            <div id="mail">
+                <i class="fas fa-envelope"></i>
+                <p class="contactos-texto">johndoe@exemplo.com</p>
+            </div>
+
+            <div id="morada">
+                <i class="fas fa-map-marker-alt"></i>
+                <p class="contactos-texto">Avenida das Ruas n1</p>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>
