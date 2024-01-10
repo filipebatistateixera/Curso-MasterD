@@ -87,7 +87,7 @@ nav {
 
 section {
     text-align: center;
-    padding-bottom: 35px;
+    padding-bottom: 85px;
 }
 
 h1 {
@@ -126,9 +126,10 @@ section div p {
 }
 
 .img-discografia {
-    padding-bottom: 50px;
+    
     width: 250px;
-    height: 300px;
+    height: auto;
+    border: 1px solid black;
 }
 
 article {
@@ -159,7 +160,7 @@ article div {
     height: 500px;
 }
 
-@media (max-width: 790px) {
+@media (max-width: 795px) {
     article {
         height: 1800px;
     }
@@ -178,7 +179,18 @@ article div {
     .foto-article {
         padding-top: 50px;
     }
-
+}
+@media (max-width: 1053px) {
+    aside {
+        width: 400px;
+    }
+    #contactos, #mensagem {
+        float: none;
+        display: contents;
+    }
+    form {
+        padding-top: 50px;        
+    }
 }
 
 article div p {
@@ -243,6 +255,7 @@ aside div {
 #contactos .icones {
     width: 15px;
     height: auto;
+    text-indent: 20px;
 }
 
 #contactos, #mensagem {
@@ -252,10 +265,12 @@ aside div {
 
 .botão {
     float: right;
+    width: 100px;
     padding: 10px;
     margin-right: 36px;
     background-color: black;
     color: white;
+    font-size: 16px;
 }
 
 footer {

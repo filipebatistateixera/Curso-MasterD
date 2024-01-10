@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+    Álbuns CCLX Worship">
+    <meta name="author" content="Filipe Teixeira">
+    <title>CClX Worship</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="shortcut icon" href="../imagens/favicon.jpg" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            overflow: hidden;
+            background-color: black;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+        }
+
+        .nav-barra a {
+           float: left;
+           margin-left: 40px;
+           padding: 15px;
+           color: rgba(255, 255, 255, 0.867);
+           text-align: center;
+           text-decoration: none;
+           font-size: 20px;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            margin-left: 40px;
+        }
+
+        .dropdown .drop {
+            color: rgba(255, 255, 255, 0.867);
+            padding: 15px;
+            margin: 0;
+            font-size: 20px;
+            background-color: inherit;
+            font-family: inherit;
+            border: none;
+            outline: none;
+        }
+
+        .nav-barra a:hover, .dropdown:hover, .drop:hover {
+            background-color: rgba(44, 44, 44, 0.888);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:rgba(44 , 44, 44, 0.888);
+            min-width: 180px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+            z-index: 1;
+            }
+
+        .dropdown-content a {
+            float: none;
+            color: rgba(255, 255, 255, 0.867);
+            margin: 0;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(44, 44, 44);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #float-right {
+            float: right;
+            padding-right: 15px;
+            color: rgba(255, 255, 255, 0.867);
+        }
+
+        .albuns {
+            padding: 50px;
+        }
+
+        .albuns p {
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-style: italic;
+            padding: 50px;
+        }
+
+        .foto {
+            max-width: 400px;
+            width: 300px;
+            height: auto;
+            padding: 40px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div p {
+            font-size: 20px;
+        }
+
+        .musicas {
+            padding: 20px;
+            padding-bottom: 70px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .musicas ol {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-barra">
+        <a href="../index.html">HOME</a>
+        
+        <div class="dropdown">
+            <button class="drop">O MINISTÉRIO<i class="fa fa-caret-down"></i></button>
+
+            <div class="dropdown-content">
+                <a href="sobre.html">Sobre</a>
+                <a href="albuns.html">Albuns</a>
+                <a href="fotos.html">Galeria de fotos</a>
+            </div>
+        </div>
+
+        <a href="">CONTACTO</a>
+        <a href="" id="float-right"> <i class="fas fa-search"></i></a>
+    </nav>
+
+    <h1>Álbuns</h1>
+
+    <div class="albuns">
+        <p>Deus Absoluto - 2023</p>
+        <a href="https://open.spotify.com/intl-pt/album/2t3J9WnT1G89q3F5dV3WCG" target="_blank"><img class="img-discografia" src="../imagens/album1.jpg" alt="Imagem Álbum"></a>
+    </div>
+
+    <div class="musicas">
+        <ol>
+            <li>1 - Fogo consumidor</li>
+            <li>2 - Como Se Não Houvesse Amanhã</li>
+            <li>3 - Minha Alegria</li>
+            <li>4 - Que Diremos</li>
+            <li>5 - Deus Absoluto</li>
+            <li>6 - Tu És o Cristo Que a Morte Venceu</li>
+            <li>7 - Tu És Bom</li>
+            <li>8 - Tua Bondade</li>
+            <li>9 - Bendito Seja o Nome do Senhor</li>
+            <li>10 - Chamados</li>
+        </ol>
+    </div>
+    
+    <footer>
+        <div class="div-footer">
+            <a href="https://www.facebook.com/comunidadecristadelisboa" target="_blank"><img class="icones" src="../ícones/facebook.png" alt="Ícone facebook"></a>
+            
+            <a href="https://www.instagram.com/comunidadecristadelisboa/?hl=pt" target="_blank"><img src="../ícones/instagram.png" alt="Ícone instagram"></a>
+
+            <a href="https://www.youtube.com/user/comunidadecristalx" target="_blank"><img src="../ícones/youtube.png" alt="Ícone youtube"></a>
+
+            <p>Powered by <ins>Filipe Teixeira</ins></p>
+        </div>
+    </footer>
+</body>
+</html>
