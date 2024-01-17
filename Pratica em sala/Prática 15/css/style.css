@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+header {
+    text-align: center;
+    background-color: #1d1d1d;
+}
+
+h1, h2, h3 {
+    color: #c52233;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h3 {
+    font-size: 30px;
+    text-decoration: underline;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+p {
+    font-size: 36px;
+}
+
+nav, aside, footer {
+    text-align: center;
+    font-size: 30px;
+}
+
+nav, aside {
+    background-color: #c52233;
+}
+
+footer {
+    background-color: #262626;
+}
+
+#picJD {
+    width: 300px;
+}
+
+.nomepagina {
+    font-size: 44px;
+    text-align: right;
+}
+
+.paragrafo2 {
+    background-color: #d7d7d7;
+}
+
+span#JohnDoe_text {
+    font-weight: bold;
+}
+
+h1::before, h1::after {
+    content: "...";
+    color: white;
+}
+
+a:link, a:visited, a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 36px;
+}
+
+div.gostos {
+    background-color: #d7d7d7;
+    margin-top: 50px;
+}
+
+#tit_gosto {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(197, 34, 51);
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-indent: 30px;
+}
+
+#pic-plane-JD, #pic-book-JD {
+    width: 200px;
+}
+
+a.botão:link, a.botão:visited, a.botão:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 42px;
+}
+
+a.botão:hover {
+    background-color: black;
+    color: white;
+}
+
+article {
+    background:linear-gradient(to right, #1d1d1d, #c52233, #ffffff);
+}
+
+aside {
+    width: 100%;
+    height: 200px;
+    background-color: #262626;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201123/pngtree-black-background-template-vol-1-image_499096.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mais_sobre {
+    position: relative;
+}
+
+.link-1 {
+    position: absolute;
+    left: 35%;
+    margin: auto;
+    width: 425px;
+    font-size: 60px;
+    color: white;
+    border: 2px solid #c52233;
+    text-decoration: none;
+    
+}
+
+.link-1:hover {
+    text-decoration: underline;
+}
+
+#ler, #viajar {
+    border: 1px dotted white;
+    display: inline-block;
+    width: 45%;
+    padding: 2%;
+}
+
+
+a.menu {
+    border-left: 6px solid white;
+    margin-left: 50px;
+    padding-left: 10px;
+}
+
+.paragrafo1, .paragrafo2 {
+    max-width: 30%;
+    display: inline-block;
+    margin-left: 30px;
+    padding: 30px;
+}
+
+.quem-image {
+    display: inline-block;
+    margin-left: 30px;
+    float: none;
+}
+
+#tit-header {
+    position: absolute;
+    width: 50%;
+    top: 160px;
+    left: 25%;
+}
+
+nav {
+    padding: 50px;
+}
+
+.nomepagina {
+    padding: 50px 100px;
+}
+
+.pref-ler-viajar {
+    float: left;
+}
+
+#pic-book-JD, #pic-plane-JD {
+    float: left;
+}

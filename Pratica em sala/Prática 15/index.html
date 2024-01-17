@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal do John Doe">
+    <meta name="author" content="Filipe Teixeira">
+    <title>Página pessoal do John Doe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/d132031da6.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        [class*="col-"] {
+            float: left;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        h4 {
+            border-bottom: 0.5px solid white;
+            padding-bottom: 50px;
+            font-size: 50px;
+        }
+
+        .mais_sobre {
+            color: white;
+            background-color: #c52233;
+        }
+
+        .quem-paragrago1 {
+            color: #d7d7d7;
+        }
+
+        .section {
+            margin: 50px 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 id="tit-header">Página pessoal do John Doe</h1>
+
+        <img src="Imagens/Png-clipart-woman-question-mark-female-1000-people-presentation.png" id="picJD" alt="Imagem"> <br>
+
+    </header>
+
+    <nav>
+        <a href="pratica12.html">Home</a>
+        <a href="Sobre_johndoe.html">Sobre</a>
+        <a href="hobbies_johndoe.html">Hobbies</a>
+        <a href="contactos_johndoe.htm">Contacto</a>
+    </nav>
+
+    <article>
+        <h2 class="nomepagina">Homepage</h2>
+    </article>
+
+    <section>
+        <h3>Quem é John Doe?</h3>
+
+        <div class="quem-image">
+            <img src="Imagens/John Doe.jpg" alt="Imagem John Doe" width="300px" height="300px">
+        </div>
+
+        <dv class="quem-paragrafo1 col-5">
+            <p class="paragrafo1"><span>"John Doe"</span> é um pseudónimo coletivo que é usado quando o nome verdadeiro de uma pessoa é desconhecido ou é intencionalmente olcultado.</p>
+        </dv>
+    
+        <div class="quem-paragrafo2 col-5">
+            <p class="paragrafo2">Em segundo lugar, esses nomes também são frequentemente usados para se referir a um hipotético "everyman" (homem comum) em outros contextos.</p>
+        </div>
+
+        <div class="gostos">
+            <h3 id="tit_gosto">Gosto de...</h3>
+
+            <div id="ler" class="col-6">
+                <h4>Ler</h4>
+                
+                <div class="col-4">
+                    <img src="Imagens/livros.png" id="pic-book-JD" alt="imagem livros">
+                </div>
+
+                <div class="pref-ler-viajar">
+                    <p>Os meus autores preferidos são:</p>
+                    <ul>
+                        <li>José Sramango</li>
+                        <li>Mia Couto</li>
+                        <li>Gabriel García Márquez</li>
+                    </ul>
+                </div>
+
+                <p>Descubra mais sobre...</p>
+
+                <a href="hobbies_johndoe.html" class="botão">Os meus livros preferidos</a>
+            </div>
+
+            <div id="viajar">
+                <h4>Viajar</h4>
+
+                <img src="Imagens/rota avião.avif" id="pic-plane-JD" alt="imagem plane">
+
+                <p>Os meus destinos preferidos são:</p>
+
+                <ol>
+                    <li>Portugal</li>
+                    <li>Cabo Verde</li>
+                    <li>Brasil</li>
+                </ol>
+
+                <p>Veja as fotografias das...</p>
+
+                <a href="hobbies_johndoe.html" class="botão">Minhas viagens</a>
+            </div>
+        </div> <br> <br>
+    </section>
+
+    <aside>
+        <div class="mais_sobre">
+            <p class="link-1"><a href="https://en.wikipedia.org/wiki/John_Doe" target="_blank">+ sobre John Doe</a></p>
+        </div>
+    </aside>
+
+    <hr>
+
+    <footer>
+            <a href="mailto:filipebt3@gmail.com">Envie um email a John Doe</a>
+    </footer>
+
+</body>
+</html>
