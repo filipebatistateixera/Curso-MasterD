@@ -62,94 +62,133 @@
 
 </head>
 <body>
-    <header>
+
+    <div class="header">
+
         <h1 id="tit-header">Página pessoal do John Doe</h1>
+        <img src="Imagens/Png-clipart-woman-question-mark-female-1000-people-presentation.png" id="picJD" alt="Imagem">
 
-        <img src="Imagens/Png-clipart-woman-question-mark-female-1000-people-presentation.png" id="picJD" alt="Imagem"> <br>
+    </div>
 
-    </header>
+    <div class="nav">
 
-    <nav>
-        <a href="pratica12.html">Home</a>
-        <a href="Sobre_johndoe.html">Sobre</a>
-        <a href="hobbies_johndoe.html">Hobbies</a>
-        <a href="contactos_johndoe.htm">Contacto</a>
-    </nav>
+        <ul>
+            <li><a href="pratica12.html">Home</a></li>
+            <li><a href="Sobre_johndoe.html">Sobre</a></li>
+            <li><a href="hobbies_johndoe.html">Hobbies</a></li>
+            <li><a href="contactos_johndoe.htm">Contacto</a></li>
+            </ul>
 
-    <article>
-        <h2 class="nomepagina">Homepage</h2>
-    </article>
-
-    <section>
-        <h3>Quem é John Doe?</h3>
-
-        <div class="quem-image">
-            <img src="Imagens/John Doe.jpg" alt="Imagem John Doe" width="300px" height="300px">
         </div>
 
-        <dv class="quem-paragrafo1 col-5">
-            <p class="paragrafo1"><span>"John Doe"</span> é um pseudónimo coletivo que é usado quando o nome verdadeiro de uma pessoa é desconhecido ou é intencionalmente olcultado.</p>
-        </dv>
+
     
-        <div class="quem-paragrafo2 col-5">
-            <p class="paragrafo2">Em segundo lugar, esses nomes também são frequentemente usados para se referir a um hipotético "everyman" (homem comum) em outros contextos.</p>
+    <div class="article">
+        <h2 class="nomepagina">Homepage</h2>
+    </div>
+    
+
+    <div class="section">
+
+        <div class="row">
+
+            <h3>Quem é John Doe?</h3>
+
+            <div class="quem-image">
+                <img src="Imagens/John Doe.jpg" id="JD-pic" alt="Imagem John Doe">
+            </div>
+
+            <dv class="quem-paragrafo1 col-5">
+                <p class="paragrafo1"><span>"John Doe"</span> é um pseudónimo coletivo que é usado quando o nome verdadeiro de uma pessoa é desconhecido ou é intencionalmente olcultado.</p>
+            </dv>
+    
+            <div class="quem-paragrafo2 col-5">
+                <p class="paragrafo2">Em segundo lugar, esses nomes também são frequentemente usados para se referir a um hipotético "everyman" (homem comum) em outros contextos.</p>
+            </div>
+        
         </div>
 
-        <div class="gostos">
+        <div class="row">
+
             <h3 id="tit_gosto">Gosto de...</h3>
 
             <div id="ler" class="col-6">
+
                 <h4>Ler</h4>
                 
                 <div class="col-4">
-                    <img src="Imagens/livros.png" id="pic-book-JD" alt="imagem livros">
+                    <img src="Imagens/livros.png" id="books" alt="imagem livros">
                 </div>
 
-                <div class="pref-ler-viajar">
-                    <p>Os meus autores preferidos são:</p>
-                    <ul>
-                        <li>José Sramango</li>
-                        <li>Mia Couto</li>
-                        <li>Gabriel García Márquez</li>
-                    </ul>
-                </div>
+                <div class="col-8">
 
-                <p>Descubra mais sobre...</p>
+                    <p class="mais_sobre">Descubra mais sobre...</p>
 
-                <a href="hobbies_johndoe.html" class="botão">Os meus livros preferidos</a>
+                    <a href="hobbies_johndoe.html" class="botão">Os meus livros preferidos</a>
+                 </div>
+
             </div>
 
-            <div id="viajar">
+            <div id="viajar" class="col-6">
+
                 <h4>Viajar</h4>
 
-                <img src="Imagens/rota avião.avif" id="pic-plane-JD" alt="imagem plane">
+                <div class="col-4">
+                    <img src="Imagens/rota avião.avif" id="plane" alt="imagem avião">
+                </div>
 
-                <p>Os meus destinos preferidos são:</p>
+                <div class="col-8">
+                    <p class="mais_sobre">Veja as fotografias das...</p>
 
-                <ol>
-                    <li>Portugal</li>
-                    <li>Cabo Verde</li>
-                    <li>Brasil</li>
-                </ol>
+                    <a href="hobbies_johndoe.html" class="botão">Minhas viagens</a>
+                </div>
 
-                <p>Veja as fotografias das...</p>
-
-                <a href="hobbies_johndoe.html" class="botão">Minhas viagens</a>
             </div>
-        </div> <br> <br>
-    </section>
 
-    <aside>
-        <div class="mais_sobre">
-            <p class="link-1"><a href="https://en.wikipedia.org/wiki/John_Doe" target="_blank">+ sobre John Doe</a></p>
         </div>
-    </aside>
 
-    <hr>
+        <div class="aside">
 
-    <footer>
-            <a href="mailto:filipebt3@gmail.com">Envie um email a John Doe</a>
-    </footer>
+            <div class="link_sobre">
+    
+                <p class="link-1"><a href="https://en.wikipedia.org/wiki/John_Doe" target="_blank">+ sobre John Doe</a></p>
+    
+            </div>
+    
+        </div>
+    
+    </div>
 
+    <div class="footer">
+
+        <div class="redes-sociais">
+
+            <a href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i
+                class="fab fa-instagram-square "></i></a>
+            <a href="https://twitter.com/?lang=pt_pt"
+                target="_blank"><i class="fab fa-twitter-square"></i></a>
+
+        </div>
+
+        <div class="contactos-jd">
+
+            <div id="telefone">
+                <i class="fas fa-phone"></i>
+                <p class="contactos-texto"> +351 123 456 789<p>
+            </div>
+            <div id="mail">
+                <i class="fas fa-envelope"></i>
+                <p class="contactos-texto"> johndoe@exemplo.com<p>
+            </div>
+            <div id="morada">
+                <i class="fas fa-map-marker-alt"></i>
+                <p class="contactos-texto"> Avenida das Ruas n1<p>
+                </div>
+
+        </div>
+
+    </div>
 </body>
 </html>

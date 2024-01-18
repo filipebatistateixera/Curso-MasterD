@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-header {
+.header {
     text-align: center;
     background-color: #1d1d1d;
 }
@@ -16,28 +16,32 @@ h1 {
 h3 {
     font-size: 30px;
     text-decoration: underline;
-    margin-left: 50px;
-    padding-top: 20px;
 }
 
 p {
     font-size: 36px;
 }
 
-nav, aside, footer {
+.nav, .aside, .footer {
     text-align: center;
     font-size: 30px;
 }
 
-nav, aside {
+.nav {
     background-color: #c52233;
 }
 
-footer {
+.footer {
     background-color: #262626;
+    display: inline-block;
+    width: 100%;
 }
 
 #picJD {
+    width: 300px;
+}
+
+#JD-pic {
     width: 300px;
 }
 
@@ -46,8 +50,14 @@ footer {
     text-align: right;
 }
 
+.paragrafo1 {
+    color: #d7d7d7;
+    font-size: 30px;
+}
+
 .paragrafo2 {
     background-color: #d7d7d7;
+    font-size: 30px;
 }
 
 span#JohnDoe_text {
@@ -64,15 +74,6 @@ a:link, a:visited, a:hover {
     text-decoration: none;
 }
 
-a:hover {
-    font-size: 36px;
-}
-
-div.gostos {
-    background-color: #d7d7d7;
-    margin-top: 50px;
-}
-
 #tit_gosto {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
@@ -80,6 +81,10 @@ div.gostos {
     font-size: 4em;
     text-transform: uppercase;
     text-align: center;
+}
+
+div.gostos {
+    background-color: #d7d7d7;
 }
 
 h4 {
@@ -90,49 +95,27 @@ h4 {
     text-indent: 30px;
 }
 
-#pic-plane-JD, #pic-book-JD {
+#books, #plane {
     width: 200px;
+    border-radius:150px;
 }
 
-a.botão:link, a.botão:visited, a.botão:hover {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-size: 42px;
-}
-
-a.botão:hover {
-    background-color: black;
-    color: white;
-}
-
-article {
+.article {
     background:linear-gradient(to right, #1d1d1d, #c52233, #ffffff);
 }
 
-aside {
+.aside {
     width: 100%;
-    height: 200px;
-    background-color: #262626;
-    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201123/pngtree-black-background-template-vol-1-image_499096.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.mais_sobre {
-    position: relative;
 }
 
 .link-1 {
-    position: absolute;
-    left: 35%;
-    margin: auto;
-    width: 425px;
+    position: relative;
+    left: 33.3%;
+    width: 435px;
     font-size: 60px;
     color: white;
     border: 2px solid #c52233;
     text-decoration: none;
-    
 }
 
 .link-1:hover {
@@ -141,29 +124,13 @@ aside {
 
 #ler, #viajar {
     border: 1px dotted white;
-    display: inline-block;
+    display: block;
     width: 45%;
-    padding: 2%;
 }
 
 
 a.menu {
     border-left: 6px solid white;
-    margin-left: 50px;
-    padding-left: 10px;
-}
-
-.paragrafo1, .paragrafo2 {
-    max-width: 30%;
-    display: inline-block;
-    margin-left: 30px;
-    padding: 30px;
-}
-
-.quem-image {
-    display: inline-block;
-    margin-left: 30px;
-    float: none;
 }
 
 #tit-header {
@@ -173,18 +140,120 @@ a.menu {
     left: 25%;
 }
 
-nav {
-    padding: 50px;
+a.menu {
+    margin-left: 50px;
+    padding-left: 10px;
 }
 
 .nomepagina {
     padding: 50px 100px;
 }
 
-.pref-ler-viajar {
+h3 {
+    margin-left: 20px;
+}
+
+.quem-image, .quem-paragrafo1, .quem-paragrafo2 {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.quem-image {
     float: left;
 }
 
-#pic-book-JD, #pic-plane-JD {
+.quem-paragrafo1, .quem-paragrafo2 {
+    max-width: 33.3%;
+    padding: 30px;
+}
+
+.gostos {
+    margin-top: 50px;
+}
+
+#ler, #viajar {
+    padding: 10px;
+    text-align: left;
+}
+
+.botão {
+    float: right;
+    font-size: 40px;
+}
+
+a.botão::before {
+    content: ____ ;
+    color: white;
+}
+
+body {
+    background-color: #1d1d1d;
+}
+
+@font-face {
+    font-family: SpecialElite-Regular;
+    src: url(../Fonts/SpecialElite-Regular.ttf);
+}
+
+h2 {
+    font-family: SpecialElite-Regular;
+}
+
+.fab, .fas {
+    font-size: 25px;
+    color: white;
+    margin-top: 20px;
+}
+
+.fas {
+    color: rgb(197, 34, 51);
+}
+
+.redes-sociais {
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 50px;
+}
+
+i.fab.fa-instagram-square {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#telefone, #mail, #morada {
+    display: inline-block;
+    width: 25%;
+
+}
+
+#mail {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.contactos-texto {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
     float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #82202a;
 }
