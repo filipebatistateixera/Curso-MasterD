@@ -176,13 +176,19 @@ h3 {
     text-align: left;
 }
 
+#float-none1, #float-none2 {
+    float: none;
+    width: auto;
+    padding-top: 200px;
+}
+
 .botão {
     float: right;
     font-size: 40px;
 }
 
 a.botão::before {
-    content: ____ ;
+    content: "____";
     color: white;
 }
 
