@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Colunas Bootstrap</title>
+
+    <style>
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .row {
+            background-color: #d3df7b;
+            padding: 20px;
+        }
+
+        .col-9, .col-6, .col-3 {
+            background-color: #809986;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <h1>Colunas Bootstrap - quebras de colunas</h1>
+    
+    <div class="container">
+        Sem quebra
+            <div class="row">
+                <div class="col-6">.col-6</div>  
+                <div class="col-9">.col-9</div>
+                <div class="col-3">.col-3</div>
+            </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        Com quebra
+            <div class="row">
+                <div class="col-6">.col-6</div>  
+                <div class="w-100"></div>
+                <div class="col-9">.col-9</div>
+                <div class="w-100"></div>
+                <div class="col-3">.col-3</div>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+</html>
