@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: LaBeauties;
+    src: url(../Fonts/La\ Beauties.ttf);
+}
+
+nav {
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+.nav-barra a {
+    float: left;
+    margin-left: 40px;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.867);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.dropdown .drop {
+    color: rgba(255, 255, 255, 0.867);
+    padding: 15px;
+    margin: 0;
+    font-size: 20px;
+    background-color: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+.nav-barra a:hover, .dropdown:hover, .drop:hover {
+    background-color: rgba(44, 44, 44, 0.888);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgba(44 , 44, 44, 0.888);
+    min-width: 180px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+    z-index: 1;
+    }
+
+.dropdown-content a {
+    float: none;
+    color: rgba(255, 255, 255, 0.867);
+    margin: 0;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#float-right {
+    float: right;
+    padding-right: 15px;
+    color: rgba(255, 255, 255, 0.867);
+}
+
+
+section {
+    text-align: center;
+    padding-bottom: 85px;
+}
+
+h1 {
+    font-size: 70px;
+    padding-top: 15px;
+    font-family: LaBeauties;
+}
+
+#titulo2 {
+    font-style: italic;
+    color: gray;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.paragrafo_section {
+    max-width: 850px;
+    min-width: 300px;
+    font-size: 18px;
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+    text-indent: 30px;
+    line-height: 1.5;
+}
+
+.discografia {
+    font-weight: normal;
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+section div p {
+    padding-bottom: 15px;
+}
+
+.img-discografia {
+    
+    width: 250px;
+    height: auto;
+    border: 1px solid black;
+}
+
+article {
+    background-color: black;
+    text-align: center;
+    height: 900px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+#tit-article {
+    color: rgba(255, 255, 255, 0.87);
+    padding-top: 50px;
+    font-family: LaBeauties;
+    font-size: 60px;
+}
+
+article > p {
+    color: rgba(255, 255, 255, 0.87);
+    padding-bottom: 40px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+article div {
+    background-color: white;
+    max-width: 790px;
+    margin: auto;
+    height: 500px;
+}
+
+@media (max-width: 795px) {
+    article {
+        height: 1800px;
+    }
+    article div {
+        width: auto;
+        height: 1400px;
+    }
+    .div-interna {
+        float: none;
+        display: contents;
+    }
+    .div-interna a {
+        max-width: 95px;
+        display: block;
+    }
+    .foto-article {
+        padding-top: 50px;
+    }
+}
+@media (max-width: 1053px) {
+    aside {
+        width: 400px;
+    }
+    #contactos, #mensagem {
+        float: none;
+        display: contents;
+    }
+    form {
+        padding-top: 50px;        
+    }
+}
+
+article div p {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.div-interna {
+    float: left;
+    height: auto;
+    text-indent: 10px;
+}
+
+.foto-article {
+    width: 250px;
+    height: auto;
+}
+
+article div p {
+    font-weight: bold;
+
+}
+
+.link-article {
+    margin: auto;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+} 
+
+aside {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 100px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#tit-aside {
+    font-weight: normal;
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 35px;
+}
+
+#titulo3 {
+    font-style: italic;
+    color: gray;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+aside div {
+    font-size: 25px;
+}
+
+#contactos {
+    float: left;   
+}
+
+#contactos .icones {
+    width: 15px;
+    height: auto;
+    text-indent: 20px;
+}
+
+#contactos, #mensagem {
+    padding: 100px;
+    text-align: left;
+}
+
+.botão {
+    float: right;
+    width: 100px;
+    padding: 10px;
+    margin-right: 36px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+footer {
+    background-color: rgba(229, 228, 228, 0.916);
+    height: 200px;
+    text-align: center;
+}
+
+.div-footer {
+    padding-top: 70px;
+}
+
+footer a img {
+    width: 25px;
+    height: auto;
+}
+
+footer div p {
+    padding: 10px;
+}
