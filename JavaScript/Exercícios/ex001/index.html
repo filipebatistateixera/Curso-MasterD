@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+
+    <script>
+        function fTeclado() {
+            alert("Alguém clicou no teclado");
+        }
+
+        function fAzul() {
+            alert("Eu sou um quadrado azul");
+        }
+
+        function fLaranja() {
+            alert("Eu sou um quadrado laranja");
+        }
+    </script>
+
+    <style>
+        #azul {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 100px auto;
+        }
+
+        #laranja {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body onkeypress="fTeclado()">
+    <div id="azul" onclick="fAzul()"></div>
+    <div id="laranja" onclick="fLaranja()"></div>
+</body>
+</html>
