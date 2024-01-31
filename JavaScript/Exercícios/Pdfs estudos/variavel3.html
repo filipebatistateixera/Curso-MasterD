@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <script>
+        var novoArray = ['carro', 'mota', 'barco'];
+        console.log('array original' + novoArray);
+        novoArray.push('comboio');
+        novoArray.unshift('bicicleta');
+        console.log('array com mais dois elementos' + novoArray);
+        novoArray.splice(novoArray.indexOf('mota'), 1);
+        novoArray.forEach(function (elemento, indice, array){
+            console.log(elemento, indice);
+        });
+
+        var texto = "alert";
+        eval(texto) + '("olá mundo")';
+        
+    </script>
+</body>
+</html>
