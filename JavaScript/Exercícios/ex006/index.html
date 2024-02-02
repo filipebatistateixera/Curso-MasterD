@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays e Alert</title>
+
+    <script>
+        var novoArray = [];
+        function inserir() {
+            var cTexto = document.getElementById('texto').value;
+            if (cTexto != '') {
+                novoArray += cTexto + ' ';
+            }
+        }
+        function mostrar() {
+            alert(novoArray);
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        <textarea id="texto"></textarea><br>
+        <input type="button" value="Inserir texto" onclick="inserir()">
+        <input type="button" value="Mostrar texto" onclick="mostrar()">
+    </form>
+</body>
+</html>
