@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - argumentos das funções</title>
+
+    <script>
+        function calculadora(operador) {
+            resultado = 0;
+            for (var i = 1; i < arguments.length; i++) {
+                switch (operador) {
+                    case "+":
+                        resultado = resultado + parseFloat(arguments[i]);
+                        break;
+                    case "-":
+                        resultado = resultado - parseFloat(arguments[i]);
+                        break;
+                    case "*":
+                        if (resultado == 0) {resultado = 1;} //evitar multiplicar por 0
+                        resultado = resultado * parseFloat(arguments[i]);
+                        break;
+                }
+            }
+            return resultado;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        alert(calculadora("+", "6", "23", "1", "67"));
+        alert(calculadora("-", "567", "2", "32", "2"));
+        alert(calculadora("*", "3", "2", "34", "2"));
+    </script>
+</body>
+</html>
