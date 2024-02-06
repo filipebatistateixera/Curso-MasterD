@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Relógio com JavaScript</title>
+
+    <script>
+        function moverRelogio() {
+            momentoActual = new Date();
+            hora = momentoActual.getHours();
+            minuto = momentoActual.getMinutes();
+            segundo = momentoActual.getSeconds();
+            imprimiHora = hora + " : " + minuto + " : " + segundo;
+            document.getElementById("relogio").value = imprimiHora;
+        }
+    </script>
+</head>
+<body onload="moverRelogio()">
+    Aqui está o relógio a funcionar...
+
+    <form name="formRelogio">
+        <input type="text" name="relogio" id="relogio" size="10">
+        <input type="button" name="rf" value="Atualizar" onclick="moverRelogio()"/>
+    </form>
+</body>
+</html>

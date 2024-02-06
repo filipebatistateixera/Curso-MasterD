@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercíco 1 - objetos</title>
+
+    <script>
+        function funcionario(antiguidade, precoHora, horas) {
+            this.antiguidade = antiguidade;
+            this.precoHora = precoHora;
+            this.horas = horas;
+        }
+    </script>
+</head>
+<body>
+    Criação de um objeto em JavaScript <br> e as suas propiedades: <br> <br>
+    <script>
+        funcinario1 = new funcionario('1980',23,6);
+        for (var i in funcionario1) {
+            document.write("funcinario1." + i + " = " + funcionario1[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

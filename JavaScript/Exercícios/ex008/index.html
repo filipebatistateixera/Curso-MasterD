@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício usando funções JavaScript</title>
+
+</head>
+<body>
+    <input type="text" id="box">
+    <button onclick="adicionar();">Adicionar</button>
+    <button onclick="apagar();">Apagar</button>
+
+    <script>
+        var items = [];
+        function adicionar(valor) {
+            valor = document.getElementById('box').value;
+            items.push(valor);
+            console.log(items.join(' '));
+        }
+        function apagar() {
+            items = [];
+            console.log('string reiniciada');
+        }
+    </script>
+
+</body>
+</html>

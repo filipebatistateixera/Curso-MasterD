@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - objetos</title>
+
+    <script>
+        function saldoMensal() {
+            document.write('Saldo mensal: ' + this.precoHora * this.horas * 30);
+        }
+        function funcionario(antiguidade, precoHora, horas) {
+            this.antiguidade = antiguidade;
+            this.precoHora = precoHora;
+            this.horas = horas;
+            this.saldoMensal = saldoMensal;
+        }
+    </script>
+</head>
+<body>
+    Criação de um objeto em JavaScript <br>e as suas propriedades: <br><br>
+    <script>
+        funcionario1 = new funcionario('1980',23,6);
+        funcionario1.saldoMensal();
+    </script>
+</body>
+</html>
