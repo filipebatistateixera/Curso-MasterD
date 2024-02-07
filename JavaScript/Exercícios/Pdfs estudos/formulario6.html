@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - formulários em JavaScript</title>
+
+    <script>
+        function validarChave() {
+            if (teste.senha.value.length < 8) {
+                alert('Deve introduzir uma senha com mais de 8 caracteres');
+                teste.senha.focus();
+                return true;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form name="teste" method="post" action="">
+        Nome do utilizador: <input type="text" name="utilizador" size="10" onkeyup="bloqueio()"> <br>
+        Senha: <input type="password" name="senha" size="10">
+        <input type="button" onclick="validarChave()" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - formulários em JavaScript</title>
+
+    <script>
+        function validar() {
+            if ((teste.texto1.value == '') || (teste.texto2.value == '')) {
+                alert('um dos campos está vazio');
+            }
+            else {
+                alert('ok');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form name="teste" method="post" action="">
+        Texto 1 <input type="text" name="texto1" value=""> <br>
+        Texto 2 <input type="text" name="texto2" value=""> <br>
+        <input type="button" onclick="validar()" value="validar">
+    </form>
+</body>
+</html>

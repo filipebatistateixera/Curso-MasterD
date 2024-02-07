@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - formulários em JavaScript - radiobutton</title>
+
+    <script>
+        function marca(form) {
+            for (i = 0; i < form.modelos.length; i++) {
+                form.modelos[i].checked = true;
+            }
+        }
+        function desmarca(form) {
+            for (i = 0; i < form.modelos.length; i++) {
+                form.modelos[i].checked = false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form name="teste" method="postPOST" action="">
+        Marcar todas as opções?<br>
+
+        <input type="radio" name="opcao" value="sim" onClick="marca(this.form)">Sim
+        <input type="radio" name="opcao" value="nao" onClick="desmarca(this.form)"> Não
+        <br><br>
+
+        Selecioneos modelos de carros que mais gosta:<br>
+
+        <input type="checkbox" name="modelos" value="Ferrari">Ferrari<br>
+        <input type="checkbox" name="modelos" value="Seat">Seat<br>
+        <input type="checkbox" name="modelos" value="Porche">Porche<br>
+        <input type="checkbox" name="modelos" value="Audi">Audi<br>
+    </form>
+</body>
+</html>
