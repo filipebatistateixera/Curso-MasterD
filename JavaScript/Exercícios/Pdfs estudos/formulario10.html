@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 - formulários em JavaScript - select option </title>
+
+    <script>
+        function inserir(modelo) {
+            opt = newOption(modelo, modelo);
+            teste.favorito.options[teste.favorito.options.length] = opt;
+        }
+
+        function eliminar(modelo) {
+            for (i = 0; i < teste.favorito.options.length; i++) {
+                if (teste.favorito.options[i].text == modelo) {
+                    teste.favorito.options[i] = null;
+                }
+            }
+        }
+
+        function newOption(modelo, modelo) {
+            //Criar um objeto Option
+            var opt = document.createElement("option");
+
+            //Assignar texto e valor
+            opt.text = modelo;
+            opt.value = modelo;
+            return opt;
+        }
+    </script>
+</head>
+<body>
+    <form name="teste" method="post" action="">
+        Selecione os modelos de carros favoritos: <br>
+        <input type="checkbox" name="modelo1" value="ferrari" onchange="if (this.checked){inserir(this.value);} else{eliminar(this.value);}"> Ferrari <br>
+
+        <input type="checkbox" name="modelo2" value="seat" onchange="if (this.checked){inserir(this.value);} else{eliminar(this.value);}"> Seat <br>
+
+        <input type="checkbox" name="modelo3" value="porche" onchange="if (this.checked){inserir(this.value);} else{eliminar(this.value);}"> Porche <br>
+
+        <input type="checkbox" name="modelo4" value="audi" onchange="if (this.checked){inserir(this.value);} else{eliminar(this.value);}"> Audi <br>
+
+        Qual é mesmo o favorito? <br>
+        <select name="favorito" id="favorito">
+            <option value="">Selecione o favorito</option>
+        </select>
+    </form>
+</body>
+</html>

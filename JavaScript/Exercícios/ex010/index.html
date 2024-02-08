@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de formulários</title>
+
+    <script src="validar.js"></script>
+
+    <script>
+        function validarNome(id) {
+            if (utilizador, /^[a-z\d_]{4,15}$/i);
+        }
+
+        function validarEmail(id) {
+            var email = /^(.+\@.+\..+)$/;
+            if(email.test(login.email.value)) {  
+            valido = 'n';
+            mensagem = mensagem + 'Email inválido \n';  
+            }
+        }
+
+        function validarChave() {
+            if (teste.senha.value.length < 8) {
+                alert('Deve introduzir uma senha com mais de 8 caracteres');
+                teste.senha.focus();
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="login" method="post">
+        Acesso para entrar! <br><br>
+
+        Nome do utilizador: <input type="text" name="utilizador" size="20" onchange="validarNome(this)">
+        <br>
+        Email: <input type="email" name="email" size="20" onchange="validarEmail(this)">
+        <br>
+        Senha: <input type="password" name="senha" size="20">
+        <input type="button" onclick="validarChave()" value="Enviar">
+    </form>
+
+</body>
+</html>

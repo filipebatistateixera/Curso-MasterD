@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - formularios em JavaScript - select</title>
+
+    <script>
+        function habilitarSelect(form) {
+            if (form.paises[0].selected == true) {
+                form.idioma.disabled = true;
+            }
+            else {
+                form.idioma.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="teste" method="post" action="">
+        <select name="paises" onchange="habilitarSelect(this.form)">
+            <option value="">Selecione um país</option>
+            <option value="portugal">Portugal</option>
+            <option value="espanha">Espanha</option>
+            <option value="franca">França</option>
+            <option value="alemanha">Alemanha</option>
+        </select>
+        <select name="idioma" disabled>
+            <option value="">Idioma</option>
+            <option value="portugues">Português</option>
+            <option value="espanhol">Espanhol</option>
+            <option value="frances">Francês</option>
+            <option value="alemao">Alemão</option>
+        </select>
+
+    </form>
+</body>
+</html>
