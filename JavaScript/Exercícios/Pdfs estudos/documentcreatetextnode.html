@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - document.createtextnode</title>
+
+    <script>
+        function adicionarTexto() {
+            var variavel = document.createTextNode("texto com createTextNode");
+            var paragrafo = document.getElementById("p1");
+            paragrafo.appendChild(variavel);
+        }
+    </script>
+</head>
+<body>
+    <div style="background-color: #cccccc;">
+        <p id="p1">Linha de texto de documento <br></p>
+    </div> <br>
+
+    <input type="button" name="env" value="Adicionar!" onclick="adicionarTexto()">
+</body>
+</html>
