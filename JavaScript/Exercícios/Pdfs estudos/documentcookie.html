@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - cookies</title>
+
+    <script>
+        var gestorCookie = {
+            criar: function(nome, valor, dias) {
+                if (dias) {
+                    var data = newDate();
+                    data.setTime(data.getTime() + (dias*24*60*60*1000));
+                    var expira = "; expira="+data.toGMTString();
+                }
+                else {
+                    var expira = "";
+                    document.cookie = nome+ "=" +valor+expira+"; path=/";
+                    alert('Criada');
+                }
+            },
+            ler: function(nome) {
+                var inicioCookie = nome + "=";
+                var cookies = document.cookie.split(';');
+                for (var i=0; i < cookies.length; i++) {
+                    var peca = cookies[i];
+                    while (peca.charAt(0) == ' ') peca = peca.substring(1,peca.length);
+                    if (peca.indexOf(inicioCookie) == 0) return peca.substring(inicioCookie.length, peca.length);
+                }
+                return null;
+            },
+            apagar: function (nome) {
+                gestorCookie.criar(nome, "", -1);
+                alert('Apagar')
+            }
+        }
+    </script>
+</head>
+<body>
+    Criar Cookie <br> 
+    Nome <input type="text" name="nome" id="nome"/> <br> 
+    Valor <input type="text" name="valor" id="valor"/> <br> 
+    Dias <input type="text" name="dias" id="dias" /> <br>
+
+    <input type="button" onclick="gestorCookie.criar( document.getElementById(nome).value, document.getElementById('valor').value, document.getElementById('dias').value)"value="Criar" /> <br> <br>
+
+    Ler Cookie<br>
+    Cookie a Ler: <input type="text" name="valordev" id="valordev"> <br>
+    <input type="button" onclick="alert(gestorCookie.leer(document.getElementById('valordev').value))"value="Ler"> <br> <br>
+
+    Apagar Cookie <br>
+    Cookie a apagar: <input type="text" name="apagar" id="apagar"> <br>
+    <input type="button" onclick="gestorCookie.apagar(document.getElementById(apagar).value)"value="Ler" /> <br> <br>
+</body>
+</html>

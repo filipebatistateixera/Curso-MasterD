@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - insertBefore</title>
+
+    
+
+    
+</head>
+<body>
+    <div>
+    <span id="segundo">e depois a omelete é feita</span>
+    </div>
+
+    <script>
+        //criar um novo elemento span
+        var novo = document.createElement("span");
+        //criar um texte dentro do novo span
+        var novoTexto = document.createTextNode("primeiro bate-se os ovos ");
+        //inserir o novo texto no novo span
+        novo.appendChild(novoTexto);
+        var antigo = document.getElementById("segundo");
+        var pai = antigo.parentNode;
+        //por último, usar a função para inserir o texto
+        pai.insertBefore(novo, antigo);
+    </script>
+</body>
+</html>

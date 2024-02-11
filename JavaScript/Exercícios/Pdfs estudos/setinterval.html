@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13 - setInterval</title>
+
+    <script>
+        var temporizador;
+        function mudar() {
+            temporizador = setInterval(rodarCores, 2000);
+        }
+        function parar () {
+            clearInterval(temporizador);
+        }
+        function rodarCores() {
+            document.getElementById('caixa').style.backgroundColor = getRandomColor();
+        }
+        function getRandomColor() {
+            var possivel = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += possivel[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</head>
+<body>
+    Caixa de cores <br>
+    <div id="caixa" style="width: 100px; height: 100px; background-color: #ff0000;">
+        &nbsp;
+    </div>
+
+    <br> <br>
+
+    <button onclick="mudar()">Rodar cores</button>
+    <button onclick="parar()">Parar</button>
+</body>
+</html>

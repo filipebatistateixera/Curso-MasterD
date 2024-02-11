@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - criando evento click</title>
+
+    <script>
+        function simularClick() {
+            //criar evento
+            var evento = document.createEvent("MouseEvents");
+            //dar o tipo e valores que desejar
+            evento.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            //selecionar o elemento sobre o qual se lança o evento criado
+            var elemento = document.getElementById("checkbox");
+            //lançar o evento
+            elemento.dispatchEvent(evento);
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="checkbox">checkbox <br>
+
+    <input type="button" value="criar evento" onclick="simularClick()">
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - windowClose e windowOpen</title>
+
+    <script>
+        //variável para conter a referência da nova janela
+        var novaJanela;
+        function abrirJanela() {
+            novaJanela = window.open('http://www.google.com', 'teste', 'width=300, height=300, status=no, toolbar=no, top=300, left=300');
+        }
+        function fecharJanela() {
+            novaJanela.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="abrirJanela()" value="Abrir">
+    <input type="button" onclick="fecharJanela()" value="Fechar">
+</body>
+</html>

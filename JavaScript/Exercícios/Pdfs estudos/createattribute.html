@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - criação de atributos</title>
+
+    <script>
+        function criarAtributo() {
+            var elemento = document.getElementById(elemento);
+            var atributo = document.createAttribute(meuAtributo);
+            atributo.nodeValue = "valor do novo atributo";
+            elemento.setAttributeNode(atributo);
+            alert(elemento.getAttribute("meuAtributo"));
+        }
+    </script>
+</head>
+<body onload="criarAtributo();">
+    <div id="elemento">
+        conteúdo do elemento
+    </div>
+</body>
+</html>

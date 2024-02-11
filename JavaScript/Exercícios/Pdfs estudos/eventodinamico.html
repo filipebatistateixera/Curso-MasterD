@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - evento dinâmico</title>
+
+    <script>
+        //função que reinicia o campo do nome
+        function modificarNome() {
+            var campo = document.getElementById("campo");
+            campo.value = "Escreva aqui o seu nome";
+        }
+        //função que insere o evento
+        function load() {
+            var botao = document.getElementById("reset");
+            botao.addEventListener("click", modificarNome, false);
+        }
+    </script>
+</head>
+<body onload="load();">
+    <input type="text" id="campo" name="campo">
+    <input type="button" id="reset" name="reset" value="Reset">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício final - parte 7</title>
+
+    <script>
+        function aviso() {
+            alert("Os seus dados erão ser protegidos por uma senha.");
+        }
+        function load() {
+            var botao = document.getElementById("proteger");
+            botao.addEventListener("click", aviso, false);
+        }
+    </script>
+</head>
+<body onload="load();">
+    <input type="text" id="campo" name="campo" value="" placeholder="Campo de texto">
+    <input type="checkbox" name="proteger" id="proteger" value="proteger os dados"> Proteger os dados
+</body>
+</html>
