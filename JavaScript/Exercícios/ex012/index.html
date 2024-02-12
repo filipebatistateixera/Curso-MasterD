@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de CSS com JavaScript</title>
+
+    <style>
+        .circulo {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            display: inline-block;
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        function jogada(id) {
+            mudarCor(id);
+        }
+        function mudarCor(caixa) {
+            caixa.style.backgroundColor = 'rgba(0,0,0,0)';
+        }
+        function reset(caixa) {
+            caixa.style.backgroundColor = '';
+        }
+    </script>
+
+</head>
+<body>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+    <div class="circulo" onmouseover="mudarCor(this)" onmouseout="reset(this)"></div>
+</body>
+</html>
