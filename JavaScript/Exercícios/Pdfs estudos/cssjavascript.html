@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - mudar estilo</title>
+
+    <link rel="stylesheet" href="antigo.css" id="estilo">
+
+    <script>
+        function mEstilo(estilo) {
+            document.getElementById('estilo').href = estilo;
+        }
+        function cEstilo(estilo) {
+            document.getElementById('estilo').href = estilo;
+        }
+    </script>
+</head>
+<body>
+    <div id="cabecalho">Sou o cabeçalho!</div>
+    <div id="corpo">Corpo da web <br>
+        <input type="button" onclick="mEstilo('antigo.css')" value="Antigo">
+        <input type="button" onclick="cEstilo('novo.css')" value="Novo">
+    </div>
+</body>
+</html>
