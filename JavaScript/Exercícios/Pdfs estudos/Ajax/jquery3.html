@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .caixa {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa impar" id="caixa">Caixa 1</div>
+    <br/><br/>
+
+    <form method="post" action="">
+        texto 1: <input type="text" name="caixa1" id="caixa1"/>
+        texto 2: <input type="text" name="caixa2" id="caixa2"
+        value="33"/>
+        texto 3: <input type="text" name="caixa3" id="caixa3"/>
+        <button onclick="alert('clique em mim, sou um botão do formulário')" id="enviar">Enviar</button>
+    </form>
+    <br/><br/>
+
+    <a href="#" onclick="$('#enviar').click();return false">Simular click no botão</a>
+    <br/><br/>
+
+    <script>
+        $(document).ready( function () {
+            $("#caixa1").blur( function() {
+                alert('saiu de texto 1');
+            });
+            $("#caixa2").change( function() {
+                alert('alterou a caixa 2');
+            });
+            $("#caixa").hover( function() {
+                $(this).css("background-color", "red");
+                }, function() {
+                    $(this).css("background-color", "white");
+                }
+            );
+            $("#caixa3").keyup(function (event) {
+                alert('na caixa 3, pressionou: ' + String.fromCharCode(event.which));
+            });
+            $("#caixa").on("click", function () {
+                alert("clicou na caixa");
+            });
+            });
+    </script>
+        
+</body>
+</html>

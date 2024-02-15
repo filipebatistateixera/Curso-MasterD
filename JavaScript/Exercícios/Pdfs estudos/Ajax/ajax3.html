@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - AJAX e JSON</title>
+
+    <script>
+        function carregar() {
+            $.ajax({
+                url : 'json.txt',
+                type : 'GET',
+                success : function (data) {
+                    objeto_json = eval("("+data+")");
+            // ler o conteúdo
+                    var frase = "";
+                    for (i = 0; i < objeto_json.ficha.length; i++) {
+                        frase = frase + "Nome: <b>" + objeto_json.ficha[i].nome + "</b><br>";
+                        frase = frase + "Idade: " + objeto_json.ficha[i].parametros.idade + "<br/>";
+                        frase = frase + "Cidade: " + objeto_json.ficha[i].parametros.cidade + "<br/>";
+                        frase = frase + "Profissão: " + objeto_json.ficha[i].parametros.profissao + "<br/>";
+                    }
+                    $("#caixa").html(frase);
+                },
+                error : function(xhr, status) {
+                    alert('Ocorreu um erro.');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="carregar()">Arquivo de funcionários</a>
+
+    <div style="width: 400px; height: 400px; position: relative;" id="caixa">
+
+        Vão ser aqui carregados os ficheiros apartir de AJAX
+        
+    </div>
+</body>
+</html>
