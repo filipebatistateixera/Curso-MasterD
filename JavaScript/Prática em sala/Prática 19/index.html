@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 19 - JavaScript</title>
+
+    <script>
+        var numeroEsc = Math.ceil(Math.random() * 20);
+        var palpite = prompt("Adivinhe o número de 1 a 20 que estou a pensar!");
+        var tentativa = 3;
+
+        if (palpite == numeroEsc) {
+            alert("Parabéns acertou!");
+        }
+        else {
+            tentativa--;
+            if (Math.abs(palpite - numeroEsc) < 4) {
+                alert("Quase que acertou");
+            }
+            else {
+                alert("Ups, falhou");
+            }
+        }
+
+        while (tentativa != numeroEsc) {
+            if (tentativa == 0) {
+                alert("Fim do jogo! GANHEI!!!");
+                break;
+            }
+            var palpite = prompt ("Adivinha aqui");
+            if (palpite == numeroEsc) {
+                alert("Parabéns, acertou!");
+            }
+            else {
+                tentativa--;
+                if (Math.abs(palpite - numeroEsc) < 4) {
+                    alert("Quase que acertou!");
+                }
+                else {
+                    alert("Ups, falhou!");
+                }
+            }
+        }
+
+        function botaoNum() {
+            document.getElementById("textoBotao").innerHTML = `O número escolhido foi ${numeroEsc}.`;
+        };
+
+    </script>
+
+    <style>
+        body {
+            background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+            background-repeat: no-repeat;
+            text-align: center;
+            width: 100%;
+            padding-top: 200px;
+            padding-bottom: 300px;
+        }
+        
+        #texto {
+            font-size: 56px;
+            color: white;
+        }
+
+        #my-button {
+            font-size: 24px;
+            background-color: white;
+            border: 1px solid;
+            color: #0093e9;
+            padding: 20px;
+        }
+
+        #textoBotao {
+            font-size: 40px;
+            font-style: italic;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="texto">Clique no botão abaixo para ver qual foi o número escolhido.</p>
+
+    <button onclick="botaoNum()" id="my-button">Número escolhido</button>
+
+    <p id="textoBotao"></p>
+</body>
+</html>
