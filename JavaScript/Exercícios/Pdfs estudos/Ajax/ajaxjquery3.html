@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício AJAX jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        function serie() {
+            $('#dados').html($('#formulario').serialize());
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="" id="formulario">
+        Nome <input type="text" name="nome">
+        <br/>
+        Apelido <input type="text" name="apelido">
+        <br/>
+        Telemóvel <input type="text" name="telemovel">
+        <br/>
+        Email <input type="text" name="email">
+        <br/>
+        Idade <input type="text" name="idade">
+        <br/>
+    </form>
+
+    <a href="#" onclick="serie()">Serializar formulário</a>
+    <br><br>
+
+    <div id="dados"></div>
+</body>
+</html>

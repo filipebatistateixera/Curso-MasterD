@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - jQuery - animação</title>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .caixa {width: 150px; height: 150px; position: relative; float: left; border: 1px solid #000;}
+    </style>
+
+</head>
+<body>
+    <br><br>
+
+    <div class="odd caixa" id="caixa1"> Caixa 1 </div>
+    <div class = "even caixa" id = "caixa2"> Caixa 2 </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <a href=""> REINICIAR O EXEMPLO </a>
+    <br><br>
+
+    <a href="#" onclick="$('#caixa1').hide('slow')">Ocultar caixa 1</a>
+    </br>
+
+    <a href="#" onclick="$('#caixa1').show('fast')">Mostrar caixa 1</a>
+    </br>
+
+    <a href="#" onclick="$('#caixa2').fadeOut(2000)">Ocultar caixa 2 pela opacidade</a>
+    </br>
+
+    <a href="#" onclick="$('#caixa2').fadeIn(100)">Mostrar caixa 2 pela opacidade</a>
+    </br>
+
+    <a href="#" onclick="$('#caixa1').slideUp(500)">Ocultar caixa 1 com o deslize vertical inferior</a>
+    </br>
+
+    <a href="#" onclick="$('#caixa1').slideDown(1500)">Mostrar caixa 1 com o deslize vertical inferior</a>
+    </br>
+    
+</body>
+</html>

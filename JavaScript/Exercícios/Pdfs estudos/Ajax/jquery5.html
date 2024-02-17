@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - jQuery - each</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        vector = ['camião', 'bicicleta', 'carro', 'mota'];
+    </script>
+
+</head>
+<body>
+    <br><br>
+
+    O array é composto por:
+
+    <br>
+
+    <script>
+        $.each(vector, function(key,valor) {
+            document.write('<b>' + valor + '</b><br/>');
+        });
+
+    </script>
+
+    <br><br>
+
+    <input type="text" id="buscar" value="">
+
+    <a href="#" onclick="buscarEnVector($('#buscar').val()); return false">Existe no vetor?</a>
+
+    <br> <br>
+
+    <script>
+        function buscarEnVector(valor) {
+            if ($.inArray(valor, vector) !== -1) {
+                alert('Existe!');
+            }
+            else {
+                alert('Não existe!');
+            }
+        }
+    </script>
+</body>
+</html>

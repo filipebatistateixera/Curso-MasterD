@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício AJAX jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        function carregar() {
+            $.ajax({
+                url : 'texto.txt',
+                type : 'GET',
+                success : function (data) {
+                    $('#caixa').html(data);
+                },
+                error : function(xhr, status) {
+                    alert('Desculpe, houve um problema');
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <a href="#" onclick="carregar()">Carregar texto</a>
+
+    <div style="width: 400px; height: 400px; position: relative;" id="caixa">
+        Aqui será carregado o texto AJAX
+    </div>
+</body>
+</html>
