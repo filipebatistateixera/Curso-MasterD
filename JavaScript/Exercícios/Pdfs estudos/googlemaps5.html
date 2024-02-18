@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - google maps</title>
+
+    <script type="text/JavaScript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+
+    <script>
+        var mapa;
+        var mostrarDireccao;
+        var servicioRota=new google.maps.DirectionsService();
+
+        function carregarmapa() {
+            mostrarDireccao=new google.maps.DirectionsRenderer();
+            var ponto = new google.maps.LatLng(38.733572717953415, -9.141140002274987);
+            var opcoes = {
+                zoom: 7,
+                center: ponto,
+                mapTypeId: google.maps.MapTypeId.ROADMAP};
+            mapa = new google.maps.Map(document.getElementById("mapa"),opcoes);
+            mostrarDireccao.setMap(mapa);
+            mostrarDireccao.setPanel(document.getElementById("rota"));
+        }
+
+        function calcularRota() {
+            var partida = document.getElementById("partida").value;
+            var destino = document.getElementById("destino").value;
+            var opcoes = {
+                origin:partida,
+                destination:destino,
+                travelMode: google.maps.DirectionsTravelMode.DRIVING}; //indica, neste caso, que a viagem será de carro/mota
+            servicioRota.route(opcoes, function(response, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    mostrarDireccao.setDirections(response); 
+                }
+            });
+        }
+    </script>
+
+</head>
+<body onload="carregarmapa()">
+
+    Partida: <input id="partida" type="textbox" value=""> 
+    Destino: <input id="destino" type="textbox" value="">
+
+    <input type="button" value="Geolocalizar" onclick="calcularRota()">
+
+    <br><br><br>
+
+    <div id="mapa" style="position: relative; float: left; width: 650px; height: 575px;"></div>
+
+    <div id="rota" style="position: relative; float: left; width: 250px;"></div>
+    
+</body>
+</html>

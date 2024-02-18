@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - google maps</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+
+    <script>
+        // criar o ponto das coordenadas
+        function carregarmapa() {
+            var ponto = new google.maps.Latlng(38.73376520878317, - 9.141150730691137);
+
+            // criar as opções do mapa
+            var opcoes = {
+                zoom: 12,
+                center: ponto,
+                mapTypeId: google.maps.mapTypeId.ROADMAP
+            };
+
+            // criar o mapa
+            var m = new google.maps.Map(document.getElementById("mapa"), opcoes);
+
+            // criar a marca
+            var marca = new google.maps.Marker({
+                position: ponto,
+                map: m,
+            });
+        }
+
+        function geo() {
+            var geocoder = new google.maps.Geocoder();
+            var direccao = $('#direccao').val();
+            geocoder.geocode({'address': direccao},
+            function (results, status) {
+                if (status == 'OK') {
+                    m.setCenter(results[0].geometry.location);
+                    var marker = newgoogle.maps.Marker({
+                        map: m,
+                        position: results[0].geometry.location
+                    });
+                }
+                else {
+                    alert('Morada não encontrada: ' + status);
+                }
+            });
+        }
+    </script>
+
+</head>
+<body onload="carregarmapa()">
+
+    <input id="direccao" type="textbox" value="Lisboa">
+
+    <input type="button" value="Geolocalizar" onclick="geo()">
+
+    <br><br><br>
+
+    <div id="mapa" style="width: 600px; height: 300px;"></div>
+    
+</body>
+</html>

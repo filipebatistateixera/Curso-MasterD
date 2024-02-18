@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - google maps</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/JavaScript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+
+    <script>
+        function carregarmapa() {
+            var ponto = new google.maps.LatLng(38.73376520878317, -9.141150730691137);
+            var opcoes = {
+                zoom: 12,
+                center: ponto,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            mapa = new google.maps.Map(document.getElementById("mapa"), opcoes);
+            var opcoesFotos = {
+                position: ponto,
+                pov: {
+                    // ângulo de rotação em relação ao norte da posição
+                    heading: 90,
+                    // variação do ângulo para cima ou para baixo da câmara
+                    pitch: 0,
+                    // zoom de close-up da foto, sendo 0 sem zoom
+                    zoom: 2                    
+                }
+            };
+            var fotos = new google.maps.StreetViewPanorama(document.getElementById("fotos") , opcoesFotos);
+            mapa.setStreetView(fotos);
+        }
+    </script>
+
+</head>
+<body onload="carregarmapa()">
+    <div id="mapa" style="width:450px; height:175px; margin-bottom: 50px;"></div>
+    <div id="fotos" style="position:relative; float:left; width:450px; height:455px;"></div>
+</body>
+</html>
