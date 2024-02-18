@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício google maps</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+
+    <script>
+        // Criar a variavel ponto com definição de coordenadas
+        function carregarmapa() {
+            var ponto = new google.maps.LatLng(38.733572717953415, - 9.141140002274987);
+            //criar as opções do mapa
+            var opcoes = {
+                zoom: 12,
+                center: ponto,
+                mapTypeId: google.maps.mapTypeId.ROADMAP};
+            //criar o mapa
+            var m = new google.maps.Map(document.getElementById("mapa"), opcoes);
+        }
+    </script>
+
+</head>
+<body onload="carregarmapa()">
+    <h1>O meu Google Maps</h1>
+
+    <div id="mapa" style="width: 300px; height: 175px;"></div>
+</body>
+</html>
