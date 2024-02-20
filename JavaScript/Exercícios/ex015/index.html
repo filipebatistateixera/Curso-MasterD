@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício final do módulo - utilizando jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .caixa-pai {width: 300px; height: 310px;}
+
+        .caixa {width: 300px; height: 300px; background-color: lightblue; text-align: center;}
+        
+        .encolhido {width: 100px; height: 100px; background-color: lightcoral;}
+
+        button {display: block; margin: 10px 0px;}
+    </style>
+
+</head>
+<body>
+    <div class="caixa-pai">
+        <div id="caixa" class="caixa">TESTE JQUERY</div>
+    </div>
+    <button type="button" id="ocultar">Ocultar</button>
+    <button type="button" id="mostrar">Mostrar</button>
+    <button type="button" id="desvanecer">Desvanecer</button>
+    <button type="button" id="aparecer">Aparecer</button>
+    <button type="button" id="negrito">Meter a negrito</button>
+    <button type="button" id="encolher">Encolher</button>
+    <button type="button" id="tamanhoIn">Tamanho inicial</button>
+    <button type="button" id="remNegrito">Remover negrito</button>
+    <input type="text" id="texto" value="insira aqui um texto">
+    <button type="button" id="inserir">Inserir</button>
+
+    <script>
+        // esconder a div
+        $("#ocultar").click (function () {
+            $("#caixa").hide();
+        })
+
+        // mostrar a div
+        $("#mostrar").click (function () {
+            $("#caixa").show();
+        })
+
+        // desvanecer a div
+        $("#desvanecer").click (function () {
+            $("#caixa").fadeOut('slow');
+        })
+
+        // aparecer a div
+        $("#aparecer").click (function () {
+            $("#caixa").fadeIn('slow');
+        })
+
+        // meter a negrito
+        $("#negrito").click (function () {
+            $("#caixa").css('font-weight', 'bold');
+        })
+
+        // encolher a div
+        $("#encolher").click (function () {
+            $("#caixa").removeClass('caixa');
+            $("#caixa").addClass('encolhido');
+        })
+
+        // voltar ao tamanho original
+        $("#tamanhoIn").click (function () {
+            $("#caixa").removeClass('encolhido');
+            $("#caixa").addClass('caixa');
+        })
+
+        // tirar o negrito
+        $("#remNegrito").click (function () {
+            $("#caixa").css('font-weight', '');
+        })
+
+        // adicionar texto
+        $("#inserir").click (function () {
+            var adTexto = $("#texto").val();
+            $("#caixa").html(adTexto);
+        })
+    </script>
+</body>
+</html>

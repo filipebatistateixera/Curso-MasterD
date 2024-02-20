@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - criação de gráficos</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+        google.charts.load('current', {'packages':['corechart'], 'language': 'pt'});
+        google.charts.setOnLoadCallback(desenharGrafico);
+        
+        function desenharGrafico () {
+            var data = newgoogle.visualization.DataTable();
+            data.addColumn ('string', 'Profissão');
+            data.addRows ([
+                ['Cozinheiro', 56],
+                ['Professor', 42],
+                ['Programador', 48]
+            ]);
+            var opcoes = {'title': 'Horário de trabalho', 'width': 400, 'height': 300};
+            var chart = newgoogle.visualization.PieChart(document.getElementById('caixa'));
+            chart.draw(data, opcoes);
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="caixa" style="width: 400; height: 300;"></div>
+</body>
+</html>
