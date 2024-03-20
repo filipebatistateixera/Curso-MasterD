@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+* {margin: 0px; padding: 0px;}
+
+@font-face {
+    font-family: ProtestRevolution;
+    src: url(../fontes/ProtestRevolution-Regular.ttf);
+}
+
+body {background-color: rgba(236, 236, 236, 0.722); font-family: Arial, Helvetica, sans-serif;}
+
+#header nav {position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.144);} 
+
+.img-fluid {margin-top: 65px;}
+
+button, li {padding-left: 30px; font-size: 20px;}
+
+.coluna1, .coluna2, .coluna3 {float: left; }
+
+.coluna1 {width: 15%; background-color: rgba(211, 211, 211, 0.741); text-align: center; padding: 15px 5px; border: 3px solid rgba(173, 173, 173, 0.467);}
+
+.coluna1 h3 {padding: 10px 0px;}
+
+.coluna1 p {padding-top: 20px;}
+
+#mapa {margin-top: 30px; width: auto; height: 200px; border: 3px solid green;}
+
+.coluna1 p a {text-decoration: none; color: black; font-weight: bolder;} 
+
+.coluna2 {width: 65%; text-align: center;  padding: 60px 10px;}
+
+.media {text-align: justify; text-indent: 20PX; padding-top: 75px;}
+
+.coluna2 h1 {font-size: 70px; font-family: ProtestRevolution;}
+
+.coluna2 h2 {padding-top: 30px; font-style: italic; font-size: 25px;}
+
+.coluna2 img {width: 300px; height: auto;}
+
+#btn-orcamento a {text-decoration: none; color: white;}
+
+.coluna3 {text-align: center; border: 3px solid rgba(173, 173, 173, 0.467); width: 20%; height: 800px;}
+
+#footer {position: relative; margin-top: 1175px; height: 200px; background-image: linear-gradient(to left, rgba(141, 140, 140, 0.526), rgba(202, 200, 200, 0.722), rgba(236, 236, 236, 0.837));}
+
+#footer div {width: 50%; float: left; padding-top: 60px;}
+
+.footer1 {text-align: right;}
+
+#img-footer {width: 250px; height: auto; margin-right: 25px;}
+
+#footer div button {padding: 8px 10px; margin-top: 20px;}
+
+#footer div button img {width: 35px; height: auto;}
+
+
+@media (max-width: 990px) {
+
+    #header nav {position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.144);} 
+
+    .img-fluid {margin-top: 65px;}
+
+    .coluna1, .coluna2, .coluna3 {float: none; display: block;}
+
+    .coluna1 {width: 100%; height: auto;}
+
+    .coluna2 { width: 100%; height: auto; padding: 50px 15px 15px 15px; text-align: center;} 
+
+    .coluna3 {width: 100%; text-align: center; height: auto;}
+
+    #footer {margin-top: auto;}
+
+    #footer div button {margin-top: 20px;}
+}
+@media (max-width: 670px) {
+
+    .coluna1 {height: auto;}
+
+    .coluna2 {height: auto; padding-bottom: 50px;}
+
+    .media img {position: absolute; left: 100px;}
+
+    .media-body {padding-top: 225px;}
+
+    .mt-0 {padding-left: 125px;}
+
+    .btn-orçamento {padding: 20px 0px;}
+    
+    #footer {height: 200px; margin-top: 30px;}
+
+    #img-footer {width: 175px; height: auto; padding-top: 10px; text-align: center;}
+
+    #footer div button {padding-right: 10px;}
+
+    #footer div button img {width: 22px; height: auto;}
+
+    #orcamento {margin: auto;}
+
+}
+
+
+

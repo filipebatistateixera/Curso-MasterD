@@ -1,16 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Caso prático - JavaScript/AJAX">
-    <meta name="author" content="Filipe Teixeira">
-    <title>Caso prático - JavaScript/AJAX</title>
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caso prático - JavaScript/AJAX">
+  <meta name="author" content="Filipe Teixeira">
+  <title>Caso prático - JavaScript/AJAX</title>
+
+  <link rel="shortcut icon" href="icones/icone1.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="estilos/style.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"> </script>
+
+  <script type="text/JavaScript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+
+
+  <script src="scripts/scripts.js"></script>
+
+
 
 </head>
-<body>
-    
+
+<body onload="carregarmapa()">
+
+  <div id="header">
+
+    <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
+      <img id="icone-menu" src="icones/icone2.png" alt="icone FT">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"> A empresa </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Sobre</a>
+              <a class="dropdown-item" href="paginas/portfolio.html">Portfólio</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="paginas/orcamento.html">Orçamento</a>
+              <a class="dropdown-item" href="paginas/contacto.html">Contacto</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"> Pesquisar </button>
+        </form>
+      </div>
+    </nav>
+
+    <img src="imagens/fotoheader5.jpg" class="img-fluid" alt="Imagem header">
+
+  </div>
+
+  <div id="content">
+
+    <div class="coluna1">
+
+      <h3>Como nos achar?</h3>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptatum vel eveniet hic aspernatur blanditiis assumenda! Dolore harum quaerat itaque dolorem enim sed tenetur? Nam voluptates praesentium aliquam laudantium dignissimos.</p>
+
+      <div id="mapa">
+        <div id="fotos"></div>
+      </div>
+
+      <p>Entre em <a href="paginas/contacto.html">CONTACTO</a> com nosco!</p>
+
+    </div>
+
+    <div class="coluna2">
+      <h1>FT Websites</h1>
+      <h2>Criamos seu site responsável</h2>
+
+      <div class="media">
+        <img class="mr-3" src="imagens/foto1.png" alt="Imagem">
+        <div class="media-body">
+          <h5 class="mt-0">Qual é a importância?</h5> <br>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Website Responsivo</h5> <br>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.
+        </div>
+        <img class="ml-3" src="imagens/foto6.jpg" alt="Imagem de exemplo genérica">
+      </div>
+
+      <div class="media">
+        <img class="mr-3" src="imagens/foto2.png" alt="Imagem">
+        <div class="media-body">
+          <h5 class="mt-0">Faça seu orçamento</h5> <br>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+          vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+          lacinia congue felis in faucibus.
+          <br><br>
+          <button id="btn-orcamento" type="button" class="btn btn-secondary"><a
+              href="paginas/orcamento.html">ORÇAMENTO</a></button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="coluna3">
+
+      <a href="#" onclick="carregar()">Clique para ver as notícias</a>
+
+      <div id="caixa">
+        As notícias vão ser carregadas nesta caixa.
+      </div>
+
+    </div>
+
+    <br>
+
+    <div id="footer">
+      <div class="footer1">
+        <img id="img-footer" src="icones/icone2.png" alt="Logo">
+      </div>
+
+      <div class="footer2">
+        <a href="https://www.instagram.com/" target="_blank"><button type="button" class="btn btn-outline-secondary"
+            style="border-radius: 100%; "><img src="icones/instagram.png" alt=""></button></a>
+
+        <a href="https://www.facebook.com/" target="_blank"><button type="button" class="btn btn-outline-secondary"
+            style="border-radius: 100%; "><img src="icones/facebook.png" alt=""></button></a>
+
+        <a href="https://www.whatsapp.com/" target="_blank"><button type="button" class="btn btn-outline-secondary"
+            style="border-radius: 100%; "><img src="icones/whatsapp.png" alt=""></button></a>
+
+        <a href="https://web.telegram.org/k/" target="_blank"><button type="button" class="btn btn-outline-secondary"
+            style="border-radius: 100%; "><img src="icones/telegram.png" alt=""></button></a>
+
+        <a href="https://pt.linkedin.com/" target="_blank"><button type="button" class="btn btn-outline-secondary"
+            style="border-radius: 100%; "><img src="icones/linkedin.png" alt=""></button></a>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
