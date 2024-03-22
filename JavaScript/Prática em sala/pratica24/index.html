@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 24</title>
+
+    <link rel="stylesheet" href="jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        #acordeao {width: 500px;}
+    </style>
+
+    <script>
+        $(function () {
+            $("#acordeao").accordion();
+        });
+
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+
+        $(function () {
+            $("#acordeao").draggable();
+        });
+
+        $("#abanar").click(function () {
+            $("#acordeao").effect("shake", "slow");
+        });
+    </script>
+
+</head>
+<body>
+    <div id="acordeao">
+        <h3>Primeiro título</h3>
+
+        <div>
+            <p>
+                Um acordeão é um widget do jQuery UI amplamente utilizado, por exemplo, para mostrar versões diferentes de um produto, ou mostrar diferentes notícias, ou até mesmo um menu hamburguer.
+
+                <p><button type="button" class="ui-button" id="abanar">Abanar</button></p>
+            </p>
+        </div>
+
+        <h3>Segundo título</h3>
+
+        <div>
+            <p>
+                Um acordeão pode conter todo tipo de elementos HTML:
+            </p>
+
+            <ul>
+                <li>Uma lista</li>
+                <li>Imagem</li>
+                <li>Entre outros</li>
+            </ul>
+        </div>
+
+        <h3>Terceiro título</h3>
+
+        <div>
+            <p>
+                Outro widget também muito utilizado é o datepicker, principalmente em formulários. Este tipo de datepicker em específico é utilizado para o utilizador indicar a sua data de nascimento (visto dar para selecionar o ano e mês).
+
+                <p>Data: <input type="text" id="datepicker"></p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
