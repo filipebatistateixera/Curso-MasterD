@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplo de orçamento</title>
+<script>
+
+    function calcularorcamento(){
+        let orcamentoTotal = 0;
+        let precoTipopagina = 0;
+        precoTipopagina = +document.getElementById('tipopagina').value;
+        document.getElementById('valor-tipopagina').value = precoTipopagina ;
+
+        const form = document.getElementById("checkboxGroup");
+        let contar = 0;
+        let somaPaginas = 0;
+        for (let i = 0; i < form.elements.length; i++) {
+            const element = form.elements[i];
+            if (element.type === "checkbox" && element.checked) {
+                contar++;
+                somaPaginas += parseInt(element.value);
+            }
+        }
+
+        const prazo = +document.getElementById('prazo').value;
+		let desconto = 1;
+		if (prazo > 0){
+			switch (prazo){
+				case 1:
+					desconto *=.95;
+					break;
+				case 2:
+					desconto *= .9;
+					break;
+				case 3:
+                    desconto *= .85;
+					break;
+				default:
+                    desconto*= .8;
+					break;
+			}
+		}
+
+        const result = document.getElementById("resultado");
+        orcamentoTotal = (precoTipopagina + somaPaginas) * desconto;
+        result.innerHTML = `Número de páginas selecionadas: ${contar}. Valor total da soma a adicionar ao orçamento: ${orcamentoTotal}.`;
+    }
+
+   
+
+    //aplicar desconto
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="caixa-orcamento pb-5">
+
+        <h3>Faça o seu orçamento</h3>
+        
+        <form action="" method="POST" onchange="calcularorcamento()" name="formulario">
+        
+                        
+        <td>Tipo de página web:</td>
+            <select name="tipopagina"  id="tipopagina" required>
+                <option value="0"></option>
+                <option value="500" id="tipo1">Tipo 1</option>
+                <option value="1000" id="tipo2">Tipo 2</option>
+                <option value="1500" id="tipo3">Tipo 3</option>
+        </select>
+            
+        <input type="text" id="valor-tipopagina" name="valor-tipopagina" value="" >
+
+    </form>
+
+
+    <h1>Marque as páginas que deseja adicionar ao seu website</h1>
+    <form id="checkboxGroup">
+      <input type="checkbox" name="checkbox1" value="400" onclick="calcularorcamento()"/> Página 1<br />
+      <input type="checkbox" name="checkbox2" value="400"  onclick="calcularorcamento()"/> Página 2<br />
+      <input type="checkbox" name="checkbox3" value="400"  onclick="calcularorcamento()"/> Página 3<br />
+      <input type="checkbox" name="checkbox4" value="400"  onclick="calcularorcamento()"/> Página 4<br />
+      <input type="checkbox" name="checkbox5" value="400"  onclick="calcularorcamento()"/> Página 5<br />
+    </form>
+    
+    <p>Escolha o prazo em meses</p>
+    <tr>
+		<td>Prazo em meses:</td>
+		<td>
+			<input type="number" id="prazo" onclick="calcularorcamento()">
+		</td>
+	</tr>
+
+    <p>Veja o resultado</p>
+    <p id="resultado"></p>
+
+  </body>
+</html>

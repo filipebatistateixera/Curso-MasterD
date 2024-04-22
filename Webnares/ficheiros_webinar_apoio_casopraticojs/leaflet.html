@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Geolocalização e Rota com OpenStreetMap</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+      integrity="sha512-rYfWnojxoCs9XlyL7aNSG1eCwBlUnyIpPQzj80mUE6YrkUBW8LRvM9Zi6+mDAm44dj/+p5UafO6UyS0SqvAKzg=="
+      crossorigin=""
+    />
+    <style>
+      #map {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Geolocalização e Rota com OpenStreetMap</h1>
+    <div>
+      <label for="destination">Qual o destino:</label>
+      <input type="text" id="destination" />
+      <button onclick="calculateRoute()">Calcular Rota</button>
+    </div>
+    <div id="map"></div>
+
+<script>
+  // Inicializa o mapa
+  var map = L.map("map").setView([0, 0], 13);
+
+  // Adiciona o tile layer do OpenStreetMap
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  // Geolocalização
+  function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+    L.marker(e.latlng)
+      .addTo(map)
+      .bindPopup("Você está dentro de " + radius + " metros deste ponto.")
+      .openPopup();
+    L.circle(e.latlng, radius).addTo(map);
+  }
+
+  function onLocationError(e) {
+    alert(e.message);
+  }
+
+  map.on("locationfound", onLocationFound);
+  map.on("locationerror", onLocationError);
+
+  map.locate({ setView: true, maxZoom: 16 });
+
+  // Calcula a rota
+  function calculateRoute() {
+    var destination = document.getElementById("destination").value;
+    var url =
+      "https://nominatim.openstreetmap.org/search?format=json&q=" +
+      destination;
+
+    fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        var lat = json[0].lat;
+        var lon = json[0].lon;
+
+        var routeUrl =
+          "https://www.openstreetmap.org/directions?engine=graphhopper_car&route=" +
+          map.getCenter().lat +
+          "%2C" +
+          map.getCenter().lng +
+          "%3B" +
+          lat +
+          "%2C" +
+          lon;
+        window.open(routeUrl, "_blank");
+      });
+  }
+</script>
+  </body>
+</html>
