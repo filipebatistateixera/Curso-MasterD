@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mapa com localização fixa e Cálculo de Rota</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa com localização fixa e Cálculo de Rota</h1>
+    <div>
+        <label for="destination">Qual a sua localização?</label>
+        <input type="text" id="destination" />
+        <button onclick="calculateRoute()">Calcular rota</button>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        var fixedLocation = L.latLng(38.575575722059185, -7.907400503123013); //localização do restaurante
+        var map = L.map('map').setView(fixedLocation, 13);
+
+        var marker = L.marker(fixedLocation).addTo(map);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        function calculateRoute() {
+            var destination = document.getElementById("destination").value;
+            var url = 'https://nominatim.openstreetmap.org/search?format=json&q=' + destination;
+
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (json) {
+                    var lat = json[0].lat;
+                    var lon = json[0].lon;
+
+                    var routeUrl = 'https://www.openstreetmap.org/directions?engine=graphhopper_car&route=' +
+                        fixedLocation.lat + ',' + fixedLocation.lng +
+                        ';' + lat + ',' + lon;
+                    window.open(routeUrl, '_blank');
+                });
+        }
+    </script>
+</body>
+</html>

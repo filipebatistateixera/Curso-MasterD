@@ -7,39 +7,36 @@
 
     <link rel="shortcut icon" href="../icones/icone1.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="../estilos/style.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="lightbox2-2.11.3/dist/css/lightbox.min.css">
+
+    <link rel="stylesheet" href="../estilos/style.css">
     
     <style>
         body {background-color: rgba(179, 179, 179, 0.603); font-size: 20px;}
 
-        #portfolio {background-color: rgba(102, 102, 102, 0.903); box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.095); height: auto; margin: 115px 50px; border-radius: 10px; color: white; padding: 30px;}
+        #portfolio {text-align: center; background-color: rgba(102, 102, 102, 0.903); box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.095); height: auto; margin: 115px 50px; border-radius: 10px; color: white; padding: 30px;}
 
         #portfolio h1 {text-align: center; padding-bottom: 20px;}
 
-        .img-port {width: 250px; height: auto; padding: 10px;}
+        
 
         #footer {margin-top: 100px;}
 
         @media (max-width: 990px) {
             #portfolio {margin-left: 15px; margin-right: 15px; }
         }
-
-
     </style>
 
-    <script>
-        lightGallery(document.getElementById('animated-thumbnails-gallery'), {
-            thumbnail: true,
-        });
-    </script>
+
 
 </head>
 <body>
     <div id="header">
         
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
             <img id="icone-menu" src="../icones/icone2.png" alt="icone FT">
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"  aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -52,15 +49,20 @@
                         <a class="nav-link" href="../index.html">Home <span class="sr-only">(página atual)</span></a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false"> A empresa </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sobre</a>
-                            <a class="dropdown-item" href="../paginas/portfolio.html">Portfólio</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../paginas/orcamento.html">Orçamento</a>
-                            <a class="dropdown-item" href="../paginas/contacto.html">Contacto</a>
-                        </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/sobre.html">Sobre <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/portfolio.html">Portfólio <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/orcamento.html">Orçamento <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/contacto.html">Contacto <span class="sr-only">(página atual)</span></a>
                     </li>
 
                 </ul>
@@ -74,93 +76,35 @@
     </div>
 
     <div id="portfolio">
-        <h1>Portifólio</h1>
-        <div id="animated-thumbnails">
-            <a href="../imagens/foto3.jpg">
-                <img class="img-port" src="../imagens/foto3.jpg" />
-            </a>
+        <h1>Portfólio</h1>
+        
+        <div>
+            <a class="example-image-link" href="../imagens/foto3.jpg" data-lightbox="example-1"><img class="example-image" src="../imagens/foto3.jpg" alt="image-1" width="300px"></a>
+    
+            <a class="example-image-link" href="../imagens/foto5.png" data-lightbox="example-1"><img class="example-image" src="../imagens/foto5.png" alt="image-5" width="300px"></a>
+    
+            <a class="example-image-link" href="../imagens/foto7.webp" data-lightbox="example-1"><img class="example-image" src="../imagens/foto7.webp" alt="image-7" width="300px"></a>
 
-            <a href="../imagens/foto5.png">
-                <img class="img-port" src="../imagens/foto5.png" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto8.webp" data-lightbox="example-1"><img class="example-image" src="../imagens/foto8.webp" alt="image-8" width="300px"></a>
+            
+            <a class="example-image-link" href="../imagens/foto18.png" data-lightbox="example-1"><img class="example-image" src="../imagens/foto18.png" alt="image-18" width="300px"></a>
 
-            <a href="../imagens/foto7.webp">
-                <img class="img-port" src="../imagens/foto7.webp" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto10.webp" data-lightbox="example-1"><img class="example-image" src="../imagens/foto10.webp" alt="image-10" width="300px"></a>
 
-            <a href="../imagens/foto8.webp">
-                <img class="img-port" src="../imagens/foto8.webp" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto11.jpg" data-lightbox="example-1"><img class="example-image" src="../imagens/foto11.jpg" alt="image-11" width="300px"></a>
 
-            <a href="../imagens/foto9.webp">
-                <img class="img-port" src="../imagens/foto9.webp" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto12.jpg" data-lightbox="example-1"><img class="example-image" src="../imagens/foto12.jpg" alt="image-12" width="300px"></a>
 
-            <a href="../imagens/foto10.webp">
-                <img class="img-port" src="../imagens/foto10.webp" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto13.webp" data-lightbox="example-1"><img class="example-image" src="../imagens/foto13.webp" alt="image-13" width="300px"></a>
 
-            <a href="../imagens/foto11.jpg">
-                <img class="img-port" src="../imagens/foto11.jpg" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto14.png" data-lightbox="example-1"><img class="example-image" src="../imagens/foto14.png" alt="image-14" width="300px"></a>
 
-            <a href="../imagens/foto12.jpg">
-                <img class="img-port" src="../imagens/foto12.jpg" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto15.jpg" data-lightbox="example-1"><img class="example-image" src="../imagens/foto15.jpg" alt="image-15" width="300px"></a>
 
-            <a href="../imagens/foto13.webp">
-                <img class="img-port" src="../imagens/foto13.webp" />
-            </a>
-
-            <a href="../imagens/foto14.png">
-                <img class="img-port" src="../imagens/foto14.png" />
-            </a>
-
-            <a href="../imagens/foto15.jpg">
-                <img class="img-port" src="../imagens/foto15.jpg" />
-            </a>
-
-            <a href="../imagens/foto16.webp">
-                <img class="img-port" src="../imagens/foto16.webp" />
-            </a>
-
-            <a href="../imagens/foto17.jpg">
-                <img class="img-port" src="../imagens/foto17.jpg" />
-            </a>
-
-            <a href="../imagens/foto18.png">
-                <img class="img-port" src="../imagens/foto18.png" />
-            </a>
-
-            <a href="../imagens/foto19.jpg">
-                <img class="img-port" src="../imagens/foto19.jpg" />
-            </a>
-
-            <a href="../imagens/foto20.png">
-                <img class="img-port" src="../imagens/foto20.png" />
-            </a>
-
-            <a href="../imagens/foto21.jpg">
-                <img class="img-port" src="../imagens/foto21.jpg" />
-            </a>
-
-            <a href="../imagens/foto22.jpg">
-                <img class="img-port" src="../imagens/foto22.jpg" />
-            </a>
-
-            <a href="../imagens/foto23.webp">
-                <img class="img-port" src="../imagens/foto23.webp" />
-            </a>
-
-            <a href="../imagens/foto24.jpg">
-                <img class="img-port" src="../imagens/foto24.jpg" />
-            </a>
-
-            <a href="../imagens/foto25.png">
-                <img class="img-port" src="../imagens/foto25.png" />
-            </a>
+            <a class="example-image-link" href="../imagens/foto16.webp" data-lightbox="example-1"><img class="example-image" src="../imagens/foto16.webp" alt="image-16" width="300px"></a>
             
         </div>
+        
     </div>
 
     <div id="footer">
@@ -180,11 +124,14 @@
             <a href="https://pt.linkedin.com/" target="_blank"><button type="button" class="btn btn-outline-secondary" style="border-radius: 100%; "><img src="../icones/linkedin.png" alt=""></button></a>
   
         </div>
-      </div>
+    </div>
 
+    <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    
 </body>
 </html>

@@ -29,6 +29,35 @@
         }
     </style>
 
+    <script>
+        function validar() {
+            var telemovel = document.formulario.telemovel.value;
+            if (isNaN(telemovel)) {
+                alert("O número inserido não está correto.");
+                return false;
+            }
+
+            if (telemovel.length!=9) {
+                alert("O número de telemóvel deverá conter 9 dígitos.");
+                return false; 
+            }
+
+            if (!telemovel.startsWith(9)) {
+                alert("Telemóvel não começa com 9.");
+                return false;
+            }
+
+            var email = document.formulario.email.value;
+
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!re.test(String(email).toLowerCase())) {
+                alert("Email inválido");
+                return false;
+            }
+        }
+    </script>
+
 </head>
 <body>
 
@@ -47,15 +76,20 @@
                         <a class="nav-link" href="../index.html">Home <span class="sr-only">(página atual)</span></a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false"> A empresa </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sobre</a>
-                            <a class="dropdown-item" href="../paginas/portfolio.html">Portfólio</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../paginas/orcamento.html">Orçamento</a>
-                            <a class="dropdown-item" href="../paginas/contacto.html">Contacto</a>
-                        </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/sobre.html">Sobre <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/portfolio.html">Portfólio <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/orcamento.html">Orçamento <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/contacto.html">Contacto <span class="sr-only">(página atual)</span></a>
                     </li>
                 </ul>
 
@@ -68,27 +102,27 @@
     </div>
     
     <div id="contacto">
-        <h1 class="titulo">Dados pra contacto</h1>
+        <form id="Formulario" onsubmit="return validar(this)">
+            <h1 class="titulo">Dados pra contacto</h1>
 
-        Nome: <input type="text" name="nome" size="20"><br>
-        <br>
-        Apelido: <input type="text" name="apelido" size="20"><br>
-        <br>
-        Telemóvel: <input type="tel" name="telemovel" id=""><br>
-        <br>
-        Email: <input type="email" name="email" id=""><br>
-        <br>
-
-        Motivo do contacto da reunião:
-        <select name="select" style="width: 300px;">
-            <option value="selecione">Selecione</option>
-            <option value="blog">Orçamento</option>
-            <option value="loja virtual">Esclarecer dúvidas</option>
-            <option value="portfolio">Acompanhamento</option>
-        </select><br>
-        <br>
-
-        <button type="button" class="btn btn-dark">Enviar</button>
+            Nome: <input type="text" name="nome" size="20" required>*<br>
+            <br>
+            Apelido: <input type="text" name="apelido" size="20" required>*<br>
+            <br>
+            Telemóvel: <input type="tel" name="telemovel" id="telemovel" maxlength="9" required>*<br>
+            <br>
+            Email: <input type="email" name="email" required>*<br>
+            <br>
+            Motivo do contacto da reunião:
+            <select class="custom-select" style="width: 300px;" required>
+                <option value="">Seleceino um motivo</option>
+                <option value="1">Orçamento</option>
+                <option value="2">Esclarecer dúvidas</option>
+                <option value="3">Acompanhamento</option>
+            </select>
+            <br><br>
+            <button onclick="alert('Seus dados foram enviados com sucesso.')" type="submit" class="btn btn-dark">Enviar</button>
+        </form>
 
     </div>
   

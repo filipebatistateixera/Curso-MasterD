@@ -11,10 +11,53 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <script>
+        function calcularorcamento() {
+            let orcamentoTotal = 0;
+            let precoTipopagina = 0;
+            precoTipopagina = +document.getElementById('tipopagina').value;
+            document.getElementById('valor-tipopagina').value = precoTipopagina;
+
+            const form = document.getElementById("checkboxGroup");
+            let contar = 0;
+            let somaPaginas = 0;
+            for (let i = 0; i < form.elements.length; i++) {
+                const element = form.elements[i];
+                if (element.type === "checkbox" && element.checked) {
+                    contar++;
+                    somaPaginas += parseInt(element.value);
+                }
+            }
+
+            const prazo = +document.getElementById('prazo').value;
+            let desconto = 1;
+            if (prazo > 0){
+                switch (prazo){
+                    case 1:
+                        desconto *=.95;
+                        break;
+                    case 2:
+                        desconto *= .9;
+                        break;
+                    case 3:
+                        desconto *= .85;
+                        break;
+                    default:
+                        desconto*= .8;
+                        break;
+                }
+            }
+
+            const result = document.getElementById("resultado");
+            orcamentoTotal = (precoTipopagina + somaPaginas) * desconto;
+            result.innerHTML = `Número de páginas selecionadas: ${contar}. Valor total da soma a adicionar ao orçamento: ${orcamentoTotal}.`;
+        }
+    </script>
+
     <style>
         body {background-color: rgba(179, 179, 179, 0.603); font-size: 20px;}
 
-        #orcamento {background-color: rgba(102, 102, 102, 0.903); box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.095); width: 700px; height: 900px; margin: 100px auto auto auto; border-radius: 10px; color: white; padding: 30px;}
+        #orcamento {background-color: rgba(102, 102, 102, 0.903); box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.095); width: 700px; height: 920px; margin: 100px auto auto auto; border-radius: 10px; color: white; padding: 30px;}
 
         #orcamento h1 {text-align: center; padding-bottom: 20px;}
 
@@ -47,15 +90,20 @@
                         <a class="nav-link" href="../index.html">Home <span class="sr-only">(página atual)</span></a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false"> A empresa </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sobre</a>
-                            <a class="dropdown-item" href="../paginas/portfolio.html">Portfólio</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../paginas/orcamento.html">Orçamento</a>
-                            <a class="dropdown-item" href="../paginas/contacto.html">Contacto</a>
-                        </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/sobre.html">Sobre <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/portfolio.html">Portfólio <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/orcamento.html">Orçamento <span class="sr-only">(página atual)</span></a>
+                    </li>
+            
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../paginas/contacto.html">Contacto <span class="sr-only">(página atual)</span></a>
                     </li>
 
                 </ul>
@@ -68,45 +116,57 @@
         </nav>
     </div>
 
-    <div id="orcamento">
+    <div id="orcamento" class="caixa-orcamento pb-5">
         
         <h1>Orçamento</h1>
         
-        <form name="orcamento" method="post">
+        <form method="POST" onchange="calcularorcamento()" name="formulario">
+
             <h2 class="tit1">Dados</h2>
 
             Nome: <input type="text" name="nome" size="20"> <br>
             Apelido: <input type="text" name="apelido" size="20"><br>
-            Telemóvel: <input type="tel" name="telemovel" id=""> <br>
+            Telemóvel: <input type="tel" name="telemovel"> <br>
 
             <h2 class="tit2">Pedido de orçamento</h2>
 
             Tipo de página web: 
-            <select name="select" style="width: 200px;">
-                <option value="selecione">Selecione</option>
-                <option value="blog">Blog</option>
-                <option value="loja virtual">Loja virtual</option>
-                <option value="portfolio">Portfólio</option>
-                <option value="site istitucional">Site institucional</option>
-                <option value="site dinamico">Site dinâmico</option>
-            </select> <br>
-            Prazo em mêses: <input type="text" name="apelido" size="20"><br><br>
+            <select name="tipopagina" style="width: 200px;" id="tipopagina" required>
+                <option value="">Selecione</option>
+                <option value="400">Blog</option>
+                <option value="1500">Loja virtual</option>
+                <option value="700">Portfólio</option>
+                <option value="900">Site institucional</option>
+                <option value="1000">Site dinâmico</option>
+            </select> 
 
-            <strong>Marque os separadores desejados</strong> <br><br>
+            <input type="text" id="valor-tipopagina" name="valor-tipopagina" value="" size="15">
+            <br><br>
 
-            <input type="checkbox" name="check" id=""> Quem somos
-            <input type="checkbox" name="check" id=""> Onde estamos <br>
-            <input type="checkbox" name="check" id=""> Galeria de fotografias
-            <input type="checkbox" name="check" id=""> eCommerce <br>
-            <input type="checkbox" name="check" id=""> Gestão interna
-            <input type="checkbox" name="check" id=""> Notícias <br>
-            <input type="checkbox" name="check" id=""> Redes sociais <br><br>
+        </form>
+
+            <strong>Marque as páginas que deseja adicionar</strong> <br><br>
+
+            <form id="checkboxGroup">
+                <input type="checkbox" name="checkbox1" value="400" onclick="calcularorcamento()"> Quem somos
+                <input type="checkbox" name="checkbox2" value="400" onclick="calcularorcamento()"> Onde estamos <br>
+                <input type="checkbox" name="checkbox3" value="400" onclick="calcularorcamento()"> Galeria de fotografias
+                <input type="checkbox" name="checkbox4" value="400" onclick="calcularorcamento()"> eCommerce <br>
+                <input type="checkbox" name="checkbox5" value="400" onclick="calcularorcamento()"> Gestão interna
+                <input type="checkbox" name="checkbox6" value="400" onclick="calcularorcamento()"> Notícias <br>
+                <input type="checkbox" name="checkbox7" value="400" onclick="calcularorcamento()"> Redes sociais<br>
+            </form><br>
+
+            Prazo em mêses: <input type="number" id="prazo" onclick="calcularorcamento()"><br><br>
 
             Orçamento estimado <br>
             (É um valor meramente indicativo, pode sofrer alterações) <br>
-            <input type="text" name="orcamento final" size="20">
+            <p id="resultado"></p> <br>
 
-        </form>
+            <a href=""><button onclick="alert('Seu orçamento foi enviado com sucesso.')" type="submit" class="btn btn-outline-light">Enviar</button></a>
+            <a href=""><button type="reset" class="btn btn-outline-light">Reset</button></a>
+
+        
 
     </div>
 
