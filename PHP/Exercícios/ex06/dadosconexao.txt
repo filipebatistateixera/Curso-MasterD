@@ -1,0 +1,4 @@
+IP : ::1
+Data e hora : 2024‐04‐22 15:13:44
+Port : 61241
+URL : /phpmyadmin/phpmasterd/exerciciosfinais/ex06/exerciciofinal6.php

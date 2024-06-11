@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 22</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+
+    <script type="text/javascript">
+        function carregar(id){
+            
+            $.ajax({
+                url: 'info.txt',
+                type: 'GET',
+                success : function(data) {
+                    objeto_json = eval("("+data+")");
+                    // ler o conteúdo
+                    var frase = "";
+                    if (id == 0) {
+                        frase = frase + "<h1>" + objeto_json.geral[0].titulo + "</h1>";
+                        frase = frase + "<p>" + objeto_json.geral[0].descricao + "</p>";
+                    }
+                    else if (id == 1) {
+                        frase = frase + "<h1>" + objeto_json.geral[1].titulo + "</h1>";
+                        frase = frase + "<p>" + objeto_json.geral[1].descricao + "</p>";
+                    }
+                    else if (id == 2) {
+                        frase = frase + "<h1>" + objeto_json.geral[2].titulo + "</h1>";
+                        frase = frase + "<p>" + objeto_json.geral[2].descricao + "</p>";
+                    }
+                    else {
+                        frase = frase + "<h1>" + objeto_json.geral[3].titulo + "</h1>";
+                        frase = frase + "<p>" + objeto_json.geral[3].descricao + "</p>";
+                    }
+                    $("#caixa").html(frase);
+                },
+            });
+
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="carregar(0)">Início</button>
+    <button type="button" onclick="carregar(1)">Quem somos</button>
+    <button type="button" onclick="carregar(2)">Produtos</button>
+    <button type="button" onclick="carregar(3)">Contactos</button>
+
+    <div id="caixa">
+        Esta é a página web de teste, e aqui é onde irá aparecer o texto do respetivo botão.
+    </div>
+
+</body>
+</html>

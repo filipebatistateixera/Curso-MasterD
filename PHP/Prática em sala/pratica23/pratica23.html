@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prática 12</title>
+
+    <link href="estilos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"> </script>
+    
+    <script src="scriptjquery.js"></script>
+
+</head>
+
+<body>
+    <div class="caixa0">
+        <span id="logo"><img src="logo.png"></span>
+    </div>
+    <div class="caixa1" id="caixa1">
+
+        <h1>Fadding em JQuery</h1>
+        <h3>Mostrar e ocultar elementos de forma suave com "fadding methods"</h2>
+
+            Ocultar toda a caixa 
+            <button class="botao cinza" type="button" id="ocultarCaixa">Ocultar Caixa</button> 
+            <br> <br>
+
+            Ocultar a lista abaixo 
+            <button class="botao cinza" type="button" id="ocultarTudo">Ocultar</button> 
+            <br> <br>
+
+            Mostrar a lista abaixo 
+            <button class="botao cinza" type="button" id="mostrarTudo">Mostrar</button> 
+            <br> <br>
+
+            Oculta e mostra a lista abaixo 
+            <button class="botao cinza" type="button" id="ocultarMostrar">Ocultar/Mostrar </button> 
+            <br> <br>
+
+            Escolha a percentagem de fadding da lista:
+            <select name="opacidade" id="selOpacidade">
+                <option value="0.2">20%</option>
+                <option value="0.5">50%</option>
+                <option value="0.8">80%</option>
+                <option value="1" selected="1">100%</option>
+            </select> 
+            <br> <br>
+
+            Escolha um valor e um elemento para alterar o seu fadding: <br>
+            <input type="range" class="slider" id="percentagem" name="percentagem" max="1" step="0.1" value="0"> <br>
+
+            <input class="textbox" type="text" name="porcento" id="porcento" value="0" maxlength="3" size="3" disabled>
+
+            <select name="elemento" id="selElemento">
+                <option value="e1">e1</option>
+                <option value="e2">e2</option>
+                <option value="e3">e3</option>
+            </select>
+
+            <button class="botao cinza" id="mudar">Mudar</button>
+            <button class="botao cinza" id="resetFade">Reset</button>
+
+            <ul id="lista">
+                <li id="e1">
+                    <h2>Elemento 1</h2>
+                </li>
+                <li id="e2">
+                    <h2>Elemento 2</h2>
+                </li>
+                <li id="e3">
+                    <h2>Elemento 3</h2>
+                </li>
+            </ul>
+
+    </div>
+</body>
+
+</html>
