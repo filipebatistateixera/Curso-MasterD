@@ -9,22 +9,37 @@
   <title>Caso prático - JavaScript/AJAX</title>
 
   <link rel="shortcut icon" href="icones/icone1.png" type="image/x-icon">
-
   <link rel="stylesheet" href="estilos/style.css">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"> </script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <script src="scripts/scripts.js"></script>
 
   <script language="javascript">
     window.onload = function() {
       setTimeout(function() {
         alert("Olá, seja bem vindo à FTWebsites!")
-      },5000)
+      }, 5000);
+    }
+
+    function carregar() {
+      var url = 'https://news.google.com/rss?hl=pt-PT&gl=PT&ceid=PT:pt-150';
+      $.ajax({
+        url: "https://api.rss2json.com/v1/api.json?rss_url=" + url,
+        type: 'GET',
+        success: function(data) {
+          var objeto_json = data;
+          // ler o conteúdo
+          var frase = "";
+          for (var i = 0; i < objeto_json.items.length; i++) {
+            frase += "Título: <b>" + objeto_json.items[i].title + "</b><br/>";
+            frase += objeto_json.items[i].description + "<br/>";
+          }
+          $("#caixa").html(frase);
+        },
+        error: function(xhr, status) {
+          alert('Ocorreu um erro.');
+          }
+      });
     }
   </script>
 </head>
@@ -32,7 +47,6 @@
 <body>
 
   <div id="header">
-
     <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
       <img id="icone-menu" src="icones/icone2.png" alt="icone FT">
 
@@ -46,23 +60,18 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
           </li>
-
           <li class="nav-item active">
             <a class="nav-link" href="paginas/sobre.html">Sobre <span class="sr-only">(página atual)</span></a>
           </li>
-
           <li class="nav-item active">
             <a class="nav-link" href="paginas/portfolio.html">Portfólio <span class="sr-only">(página atual)</span></a>
           </li>
-
           <li class="nav-item active">
             <a class="nav-link" href="paginas/orcamento.html">Orçamento <span class="sr-only">(página atual)</span></a>
           </li>
-
           <li class="nav-item active">
             <a class="nav-link" href="paginas/contacto.html">Contacto <span class="sr-only">(página atual)</span></a>
           </li>
-
         </ul>
 
         <form class="form-inline my-2 my-lg-0">
@@ -73,25 +82,18 @@
     </nav>
 
     <img src="imagens/fotoheader5.jpg" class="img-fluid" alt="Imagem header">
-
   </div>
 
   <div id="content">
-
     <div class="coluna1">
-
       <h3>Como nos achar?</h3>
-
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptatum vel eveniet hic aspernatur blanditiis assumenda! Dolore harum quaerat itaque dolorem enim sed tenetur? Nam voluptates praesentium aliquam laudantium dignissimos.</p>
-
       <p>Entre em <a href="paginas/contacto.html">CONTACTO</a> com nosco!</p>
-
     </div>
 
     <div class="coluna2">
       <h1>FT Websites</h1>
       <h2>Criamos seu site responsável</h2>
-
       <div class="media">
         <img class="mr-3" src="imagens/foto1.png" alt="Imagem">
         <div class="media-body">
@@ -123,16 +125,14 @@
           <button id="btn-orcamento" type="button" class="btn btn-secondary"><a href="paginas/orcamento.html">ORÇAMENTO</a></button>
         </div>
       </div>
-
     </div>
 
     <div class="coluna3">
-
       <a href="#" onclick="carregar()">Clique para ver as notícias</a>
-      
       <div id="caixa">
         As notícias vão ser carregadas nesta caixa.
       </div>
+    </div>
 
     </div>
 
@@ -159,15 +159,7 @@
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+ 
 </body>
 
 </html>
